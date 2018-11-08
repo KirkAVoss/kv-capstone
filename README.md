@@ -1,4 +1,3 @@
-# kv-capstone
 ## KV Capstone Preliminary Proposal
 
 **Capstone Ideas**:
