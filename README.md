@@ -20,14 +20,14 @@ Using historic and current game and season stats, I attempt to predict the shape
 
 The most notable work related to predicting player performance has been FiveThirtyEight.com's CARMELO player projection system.  FiveThirtyEight.com iterates on the CARMELO system annually and should provide a good baseline for comparison.
 
-CARMELO's backbone "is an algorithm that compares current players to past ones who had statistically similar profile through the same age." *See* https://fivethirtyeight.com/features/our-nba-player-projections-are-ready-for-2018-19/.  CARMELO mostly relies on a blend of RPM (real-plus-minus) and BPM (box-plus-minus). Id.  The CARMELO system also uses in-season ELO ratings (hence the "ELO" in CARMELO) to update the ranking.  FiveThirtyEight is currently mulling over overhauling their in-season update mechanic.
+CARMELO's backbone ["is an algorithm that compares current players to past ones who had statistically similar profile through the same age."](https://fivethirtyeight.com/features/our-nba-player-projections-are-ready-for-2018-19/).  CARMELO mostly relies on a blend of RPM (real-plus-minus) and BPM (box-plus-minus). Id.  The CARMELO system also uses in-season ELO ratings (hence the "ELO" in CARMELO) to update the ranking.  FiveThirtyEight is currently mulling over overhauling their in-season update mechanic.
 
-Obviously, I intend to utilize an approach that leverages advanced stats such as BPM to predict career arcs, but I also want to explore how (or even *if*) a player's teammates affect his development.  To wit, in his Hall-of-Fame induction speech, Steve Nash thanked Michael Finley (a former Dallas Maverick borderline-All Star in the late 90s and early 00s) for his influence on both Nash and Dirk Nowitzki during their developmental years.  *See* https://twitter.com/NBATV/status/1038243684221763585:  
+Obviously, I intend to utilize an approach that leverages advanced stats such as BPM to predict career arcs, but I also want to explore how (or even *if*) a player's teammates affect his development.  To wit, in his Hall-of-Fame induction speech, [Steve Nash thanked Michael Finley (a former Dallas Maverick borderline-All Star in the late 90s and early 00s) for his influence on both Nash and Dirk Nowitzki during their developmental years.](https://twitter.com/NBATV/status/1038243684221763585):  
 
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Steve Nash has a special thanks for Dirk &amp; Michael Finley. <a href="https://twitter.com/hashtag/18HoopClass?src=hash&amp;ref_src=twsrc%5Etfw">#18HoopClass</a> <a href="https://t.co/gLqkEHqLUu">pic.twitter.com/gLqkEHqLUu</a></p>&mdash; NBA TV (@NBATV) <a href="https://twitter.com/NBATV/status/1038243684221763585?ref_src=twsrc%5Etfw">September 8, 2018</a></blockquote>
 
-Hopefully, playing with efficient, non-ball dominant teammates early in a player's career has a positive impact of their career arcs.  It will be interesting to see if the data support this hypothesis.
+I suspect playing with efficient, non-ball dominant teammates early in a player's career has a positive impact of their career arcs.  It will be interesting to see if the data support this hypothesis.
 
 ## Methodology and Technology Stack (Data Sources and Format)
 
@@ -36,13 +36,19 @@ I scraped Basketball-Reference.com for initial datasets for all players from 199
 For historical salary information, I plan on pulling data from hoopshype.com.
 
 ## How will I present my work?  
-  I'd still prefer to create a web-app, but working with some web-based technology last week reminded me of why I often avoided it in the past.  But I think selecting the player, and producing a career-arc plot (with comparisons) would be a neat feature. If I am far enough along, I may try to do a web-app, but I suspect that I will make slides.
+
+I'd still prefer to create a web-app, but working with some web-based technology last week reminded me of why I often avoided it in the past.  But I think selecting the player, and producing a career-arc plot (with comparisons) would be a neat feature. If I am far enough along, I may try to do a web-app, but I suspect that I will make slides.
+
+**Visualizations**
+-   Career arc plots (win shares versus season) against replacement level performance
+-   Individual stats versus average at position
+-   Career arc versus similar (or selected player)
 
 ## Potential Problems
 
-I suspect that the changing landscape in the *post-Warriors* meta will make predicting by position more difficult, as positions seem to matter much less.  I want to avoid manually classifying players as much as possible (like calling Kevin Durant a "shooting big,"" or try to force unicorn Kristaps Porzingas into a mold). One solution might be to ignore position, but as the NBA converges to a wing-centric meta (big 2s, regular 3s, and stretch 4s), that will prove difficult.
+I suspect that the changing NBA landscape in the *post-Warriors* meta will make predicting by position more difficult, as positions seem to matter much less.  I want to avoid manually classifying players as much as possible (like calling Kevin Durant a "shooting big,"" or try to force unicorn Kristaps Porzingas into a mold). One solution might be to ignore position, but as the NBA converges to a wing-centric meta (big 2s, regular 3s, and stretch 4s), that will prove difficult.
 
-A related issue is the increased pace of place from the early nineties to present day (which is still slower than some of the pre-nineties paces).  This makes using individual stats problematics.  Because of more possessions in the 60s, players had more opportunities to score, rebound, or collect assists.  This makes generational comparison different (e.g., Oscar Robertson's triple double season in 1962 is not the same as Russell Westbrook's in 2017).
+A related issue is the increased pace of place from the early nineties to present day (which is still slower than some of the pre-nineties paces).  This makes using individual stats problematics.  Because of more possessions in the 60s, players had more opportunities to score, rebound, or collect assists.  This makes generational comparison different (*e.g.*, Oscar Robertson's triple-double season in 1962 is not the same as Russell Westbrook's MVP season in 2017).
 
 Other potential problems include the impact of the three-point line on scoring, which makes historical data suspect.  The NBA did not introduce the three-point line until 1979.  Further, the NBA adjusted the three-point range in the 1994/95 season and the following three seasons. Given the explosion of three point shots in recent years, I will likely limit training to the 1998 season and beyond.  That limitation will also help curtail generational differences.
 
