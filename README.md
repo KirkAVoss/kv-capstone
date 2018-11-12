@@ -1,5 +1,3 @@
-{::options parse_block_html="true" /}
-
 # Final Capstone Proposal
 
 **NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination**:
@@ -26,14 +24,8 @@ CARMELO's backbone "is an algorithm that compares current players to past ones w
 
 Obviously, I intend to utilize an approach that leverages advanced stats such as BPM to predict career arcs, but I also want to explore how (or even *if*) a player's teammates affect his development.  To wit, in his Hall-of-Fame induction speech, Steve Nash thanked Michael Finley (a former Dallas Maverick borderline-All Star in the late 90s and early 00s) for his influence on both Nash and Dirk Nowitzki during their developmental years.  *See* https://twitter.com/NBATV/status/1038243684221763585:  
 
-{::options parse_block_html="false" /}
-
-<div class="center">
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Steve Nash has a special thanks for Dirk &amp; Michael Finley. <a href="https://twitter.com/hashtag/18HoopClass?src=hash&amp;ref_src=twsrc%5Etfw">#18HoopClass</a> <a href="https://t.co/gLqkEHqLUu">pic.twitter.com/gLqkEHqLUu</a></p>&mdash; NBA TV (@NBATV) <a href="https://twitter.com/NBATV/status/1038243684221763585?ref_src=twsrc%5Etfw">September 8, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
 
 Hopefully, playing with efficient, non-ball dominant teammates early in a player's career has a positive impact of their career arcs.  It will be interesting to see if the data support this hypothesis.
 
