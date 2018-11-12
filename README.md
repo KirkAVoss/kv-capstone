@@ -1,3 +1,5 @@
+{::options parse_block_html="true" /}
+
 # Final Capstone Proposal
 
 **NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination**:
