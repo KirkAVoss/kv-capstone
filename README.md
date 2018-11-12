@@ -2,7 +2,7 @@
 
 **NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination**:
 
-##Background and Motivation
+## Background and Motivation
 
 National Basketball Association ("NBA") contracts for rookies are are guided by the collective bargaining agreement ("CBA") between the NBA and NBA players's union.  Rookie contracts are set by a scale--each player can negotiate their contract between 80% to 120% of the scale.  However, every rookie contract follows the same format--a two year contract, followed by two years of "team options."  This means that the drafting team has the option to continue to employ the player on the "rookie scale."  The player has little negotiating power.
 
@@ -16,7 +16,7 @@ But in the rookie-deal context, teams are betting on the come.  Young players ha
 
 Using historic and current game and season stats, I attempt to predict the shape of an NBA player's career based on their contribution to winning basketball--memorialized in the number of wins that player provides for his team (e.g., Win Shares).  I seek to correlate those wins to a salary range, as a percentage of salary cap.
 
-##Previous Approaches
+## Previous Approaches
 
 The most notable work related to predicting player performance has been FiveThirtyEight.com's CARMELO player projection system.  FiveThirtyEight.com iterates on the CARMELO system annually and should provide a good baseline for comparison.
 
@@ -29,19 +29,16 @@ Obviously, I intend to utilize an approach that leverages advanced stats such as
 
 Hopefully, playing with efficient, non-ball dominant teammates early in a player's career has a positive impact of their career arcs.  It will be interesting to see if the data support this hypothesis.
 
-##Methodology and Technology Stack (Data Sources and Format)
+## Methodology and Technology Stack (Data Sources and Format)
 
 I scraped Basketball-Reference.com for initial datasets for all players from 1997 to the previous completed season.  To pull advanced stats, I utilized the Google Chrome extension Data Miner and created a "recipe" to gather data.  Currently, I have this data stored in CSV format.  I have also pulled pre-1997 stats for players, but that data exclude advanced stats.  The current data size is around 13 MB.
 
 For historical salary information, I plan on pulling data from hoopshype.com.
 
-<Data processing comprised . . .>
-
-
-##How will I present my work?  
+## How will I present my work?  
   I'd still prefer to create a web-app, but working with some web-based technology last week reminded me of why I often avoided it in the past.  But I think selecting the player, and producing a career-arc plot (with comparisons) would be a neat feature. If I am far enough along, I may try to do a web-app, but I suspect that I will make slides.
 
-##Potential Problems
+## Potential Problems
 
 I suspect that the changing landscape in the *post-Warriors* meta will make predicting by position more difficult, as positions seem to matter much less.  I want to avoid manually classifying players as much as possible (like calling Kevin Durant a "shooting big,"" or try to force unicorn Kristaps Porzingas into a mold). One solution might be to ignore position, but as the NBA converges to a wing-centric meta (big 2s, regular 3s, and stretch 4s), that will prove difficult.
 
@@ -49,8 +46,8 @@ A related issue is the increased pace of place from the early nineties to presen
 
 Other potential problems include the impact of the three-point line on scoring, which makes historical data suspect.  The NBA did not introduce the three-point line until 1979.  Further, the NBA adjusted the three-point range in the 1994/95 season and the following three seasons. Given the explosion of three point shots in recent years, I will likely limit training to the 1998 season and beyond.  That limitation will also help curtail generational differences.
 
-##Next Steps
+## Next Steps
 
 My low-hanging-fruit next steps are to pull salary information (for the ultimate business decision) and determine if I can pull historical advanced stats (although I doubt I can effectively use them).
 
-The real next step is to do some EDA--create some plots by year, position, body-size to get an expected trend.
+The real next step is to do some EDA--create some plots by year, position, body-size to get an expected trend.  Then I'll make my first attempt at an MVP.
