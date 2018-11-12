@@ -1,22 +1,32 @@
-## KV Capstone Preliminary Proposal
-
-**Capstone Ideas**:
-
-My three capstone proposals are (in order of highest-to-lowest data-availability):
-
-1. A win-share estimator for NBA players.
-2. A outcome predictor for Destiny player-versus-player ("PVP") matches.
-3. A commercial real estate ("CRE") deal classifier.
+## Final Capstone Proposal
 
 **NBA Win-Share Estimator**:
 
-1. High level description of project.
+1. Background and Motivation
 
-I want to predict the effectiveness of NBA players--especially those coming off their Rookie contracts.  More specifically, I want to analyze season-based stats and game-specific stats to get an objective prediction of how young NBA players will fare when during their first "big" (i.e., non-Rookie) contract.
+National Basketball Association ("NBA") contracts for rookies are are guided by the collective bargaining agreement ("CBA") between the NBA and NBA players's union.  Rookie contracts are set by a scale--each player can negotiate their contract between 80% to 120% of the scale.  However, every rookie contract follows the same format--a two year contract, followed by two years of "team options."  This means that the drafting team has the option to continue to employ the player on the "rookie scale."  The player has little negotiating power.
 
-2. What question or problem are you trying to solve?
+For talented players, this team option means that the first time an NBA team must make a "real" salary determination is between a player's 2nd and 3rd years.  And again, between the 3rd and 4th years, the team can exercise its option to keep the player employed.  But these 3rd and 4th year option *prices* are set on the rookie scale.  So there's not much price negotiation at this point in a player's career.
 
-Because Rookie contracts are set by the NBA's collective bargaining agreement ("CBA"), the first time any NBA executive has to make a "real" contract decision for the rookie is after the expiration of the Rookie contract.  That can lead to drastically over paying Rookies based on perceived skill or potential--versus what the Rookie actually provides to the team (e.g., portions of wins accountable to the Rookie's performance).  I hope to help provide an objective guidepost for the player's salary.
+The first "good" opportunity for a payday comes on the player's foray into free-agency.  Thus, for players with success in the early stages of their career, this opportunity arrives between their 4th and 5th year.
+
+Consequently, there is a need to objectively assess the player's ability to help a team win basketball at this stage.  Often, contracts for professional athletes pay the athlete for their performance in *the past*.  In other words, contracts reflect the player's previous performance, but because of age (or other factors), that performance declines.  That leaves team management with underperforming, expensive assets.
+
+Using historic and current game and season stats, I attempt to predict the shape of an NBA player's career based on their contribution to winning basketball--memorialized in the number of wins that player provides for his team (e.g., Win Shares).  I seek to correlate those wins to a salary range, as a percentage of salary cap.
+
+*Previous Approaches*
+
+The most notable approach
+
+2.  Methodology and Technology Stack
+
+I scraped Basketball-Reference.com for initial datasets for all players from 1997 to the previous completed season.  To pull advanced stats, I utilized the Google Chrome extension Data Miner and created a "recipe" to gather data.
+
+For historical salary information, I scraped hoopshype.com.
+
+<Data processing comprised . . .>
+
+<Challenges . . . I suspect that the changing landscape in the *post-Warriors* meta will make predicting by position more difficult>
 
 3. How will you present your work?  
   * Web app--I'd prefer to develop a web-app, but I have zero web app experience, so I will probably default to slides.
@@ -27,43 +37,3 @@ I expect to be able to get most of my data from Basketball-Reference.com, but I 
 5. What’s your next step towards making this your project?
 
 I need to pull the available data from Basketball-Reference.com.
-
-**Destiny PVP Analyzer**
-
-1. High level description of project.
-
-I want to predict the outcome of Destiny PVP matches.  Destiny--an online-only FPS where you shoot aliens (and other people) in the face in search of better loot--has various game modes were teams of differing sizes compete.  One team wins based on the game mode (total enemies defeated, rounds won, territory controlled, etc.).
-
-2. What question or problem are you trying to solve?
-
-One of the major issues with any multi-player game is proper matchmaking (the process of finding opponents waiting in queue).  Lop-sided teams can run up the score quickly against less-skilled (or less coordinated) opponents--ruining the fun of those less-skilled players, causing them to stop playing.   If Bungie (Destiny's developer) can predict with certainty that one team will crush the other, then it could either reshuffle teams or find a different match.   
-
-3. How will you present your work?  
-  * Web app--Again, I'd prefer to develop a web-app, but I have zero web app experience, so I will probably default to slides.
-4. What are your data sources?
-
-My data will likely come from Bungie's Destiny API, along with information available at DestinyTracker.com.
-
-5. What’s your next step towards making this your project.
-
-Destiny is available on three platforms--PC, Xbox, and Playstation.  I have been able to pull Playstation-player data from Bungie's API (by player name), but not  XBox- or PC-player data.  I need to determine if I can only retrieve player-data, or if I can get match-level data without having to scrape for a bunch of users (whose handles it will be difficult to collect).  
-
-**CRE Deal Classifier**
-
-1. High level description of project.
-
-I want to classify the outcome of potential CRE deals (successful or not).  I want to analyze various deal metrics to automate the process of deal analysis.
-
-2. What question or problem are you trying to solve?
-
-CRE analysis, while it _should be_ objective, suffers from all things that have human involvement--personal bias. Some analysts push a deal for personal reasons (e.g., they originate them, they fall in love with some aspect of the deal). I want to create a first-pass filter to remove suspect deals--saving time and man-hours.
-
-3. How will you present your work?  
-  * Slides--Again, I'd prefer to develop a web-app, but given this information would likely be proprietary, a slide presentation probably makes the most sense .
-4. What are your data sources?
-
-My data would come from a small regional bank in South Texas, most likely in the form of numerous Excel spreadsheets.  I have a familial relationship with the bank's Chief Credit Officer, so I can probably get the data without too much trouble (probably an NDA or even without an NDA with some data sanitation on the bank's end). My overriding concern is that there is simply not enough deals to train a model (probably less than 100 deals). 
-
-5. What’s your next step towards making this your project.
-
-I have had discussions about getting the data. I will follow-up during review week.  It will probably be a fun project regardless of whether I do it as my capstone.   
