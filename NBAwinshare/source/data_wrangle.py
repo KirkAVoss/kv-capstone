@@ -1,3 +1,9 @@
+import pandas as pd
+import re
+from os import listdir
+import matplotlib.pyplot as plt
+
+
 def read_advanced_season_stats(filepath):
     '''
     Function reads in the file at 'filepath' and returns a dataframe of the advanced stats
@@ -57,7 +63,7 @@ def reduce_traded_players_to_one_row(df):
     '''
     Reduces the traded players in the dataframe to one row.  Should be called on an individual seasonal dataframe
     because that's how the function was tested. Puts the invidual teams in a comma-delimited string
-    ***Original DF is modified by this function***
+    ***Input DF is modified by this function***
 
     Input: seasonal dataframe (per_game or advanced)
     return: formatted dataframe (the same one passed in) with one row per payer
@@ -141,7 +147,7 @@ def clean_and_join_seasonal_dataframe(df_advanced, df_pergame):
     '''
 
     #Merge on dataframe, by player and season
-    joined_df = pd.merge(advanced, pergame, how='left', left_on=['Player','Season'], right_on = ['Player','Season'])
+    joined_df = pd.merge(df_advanced, df_pergame, how='left', left_on=['Player','Season'], right_on = ['Player','Season'])
 
     #Based on EDA, most of the stats with NANs come from low-minutes players who haven't done much in-game
     #also, using the fill in-place because I've had trouble with fillna not working in the past.
@@ -153,8 +159,10 @@ def clean_and_join_seasonal_dataframe(df_advanced, df_pergame):
     if 'Rk_y' in joined_df:
         joined_df.drop('Rk_y',axis=1, inplace=True)
 
+    #Reset the index because it looks weird
     joined_df = joined_df.reset_index(drop=True)
 
+    #Get rid of basketball reference's * used to denote HOF players
     joined_df['Player'] = joined_df['Player'].str.replace('*', '', regex=False)
 
     return joined_df.sort_values(['Player', 'Season'], ascending=[True, True])
@@ -167,3 +175,4 @@ def read_demographic_data(filename):
     Returns: dataframe of demo info
     '''
     df = pd.read_csv(filename)
+    return df
