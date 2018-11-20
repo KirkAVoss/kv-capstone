@@ -39,21 +39,11 @@ class SeasonalRegressor():
 
     def predict(self, X):
         '''
-        Predict class for X.
+        Predict win-shares for X.
         Returns y (predictions)
 
         '''
         #run the model for each classifier
-        pass
-
-    def predict_proba(self, X):
-        '''
-        Predict probabilities for class for X.
-        Returns y (prediction probabilities) for the predicted class
-
-        '''
-
-        #get the probabilities for each classifier
         pass
 
 
