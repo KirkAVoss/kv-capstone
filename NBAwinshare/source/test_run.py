@@ -6,4 +6,4 @@ seasonal = data_wrangle.clean_and_join_seasonal_dataframe(advanced, pergame)
 demographic = data_wrangle.read_demographic_data('../data/player_data.csv')
 
 print(seasonal.head())
-print(demographic.head())
+print(pd.read_csv(demographic.head()))
