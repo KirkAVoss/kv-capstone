@@ -165,6 +165,63 @@ def clean_and_join_seasonal_dataframe(df_advanced, df_pergame):
     #Get rid of basketball reference's * used to denote HOF players
     joined_df['Player'] = joined_df['Player'].str.replace('*', '', regex=False)
 
+    #Handle repeated names
+    repeats = ['Charles Jones', 'Charles Smith', 'Chris Johnson', 'Chris Wright',
+       'Dee Brown', 'Gary Payton', 'Glen Rice', 'Glenn Robinson',
+       'Marcus Williams', 'Mike James', 'Patrick Ewing',
+       'Reggie Williams', 'Tim Hardaway']
+
+    #Patrick Ewing Splits
+    joined_df.loc[(joined_df['Player']=='Patrick Ewing') & (joined_df['Season'] < 2003),'Player']= "Patrick Ewing (i)"
+    joined_df.loc[(joined_df['Player']=='Patrick Ewing') & (joined_df['Season'] > 2003),'Player']= "Patrick Ewing (ii)"
+
+    #Charles Jones Splits
+    joined_df.loc[(joined_df['Player']=='Charles Jones') & (joined_df['Season'] < 1999),'Player']= "Charles Jones (i)"
+    joined_df.loc[(joined_df['Player']=='Charles Jones') & (joined_df['Season'] >= 1999),'Player']= "Charles Jones (ii)"
+
+    #Chris Johnson Splits (they overlapped, so differentiate on position)
+    joined_df.loc[(joined_df['Player']=='Chris Johnson') & (joined_df['Pos'] == 'C'),'Player']= "Chris Johnson (i)"
+    joined_df.loc[(joined_df['Player']=='Chris Johnson') & (joined_df['Pos'] == 'SF'),'Player']= "Chris Johnson (ii)"
+
+    #Charles Smith Splits (they overlapped, so differentiate on position)
+    joined_df.loc[(joined_df['Player']=='Charles Smith') & (joined_df['Season'] < 1998),'Player']= "Charles Smith (i)"
+    joined_df.loc[(joined_df['Player']=='Charles Smith') & (joined_df['Season'] >=1998),'Player']= "Charles Smith (ii)"
+
+
+    #Chris Wright (they overlapped, so differentiate on position)
+    joined_df.loc[(joined_df['Player']=='Chris Wright') & (joined_df['Pos'] == 'SF'),'Player']= "Chris Wright (i)"
+    joined_df.loc[(joined_df['Player']=='Chris Wright') & (joined_df['Pos'] == 'SG'),'Player']= "Chris Wright (ii)"
+
+    #Dee Brown Splits
+    joined_df.loc[(joined_df['Player']=='Dee Brown') & (joined_df['Season'] < 2003),'Player']= "Dee Brown (i)"
+    joined_df.loc[(joined_df['Player']=='Dee Brown') & (joined_df['Season'] > 2006),'Player']= "Dee Brown (ii)"
+
+    #Gary Payton Splits
+    joined_df.loc[(joined_df['Player']=='Gary Payton') & (joined_df['Season'] < 2008),'Player']= "Gary Payton (i)"
+    joined_df.loc[(joined_df['Player']=='Gary Payton') & (joined_df['Season'] > 2016),'Player']= "Gary Payton (ii)"
+
+    #Glen Rice Splits
+    joined_df.loc[(joined_df['Player']=='Glen Rice') & (joined_df['Season'] < 2005),'Player']= "Glen Rice (i)"
+    joined_df.loc[(joined_df['Player']=='Glen Rice') & (joined_df['Season'] > 2013),'Player']= "Glen Rice (ii)"
+
+    #Glenn Robinson
+    joined_df.loc[(joined_df['Player']=='Glenn Robinson') & (joined_df['Season'] < 2006),'Player']= "Glenn Robinson (i)"
+    joined_df.loc[(joined_df['Player']=='Glenn Robinson') & (joined_df['Season'] > 2014),'Player']= "Glenn Robinson (ii)"
+
+    #Marcus was more difficult, I edited the data to make SAS-F Marcus to be 'Marcus (ii)''
+
+    #Mike James
+    joined_df.loc[(joined_df['Player']=='Mike James') & (joined_df['Season'] < 2015),'Player']= "Mike James (i)"
+    joined_df.loc[(joined_df['Player']=='Mike James') & (joined_df['Season'] > 2015),'Player']= "Mike James (ii)"
+
+    #Reggie Williams
+    joined_df.loc[(joined_df['Player']=='Reggie Williams') & (joined_df['Season'] < 1998),'Player']= "Reggie Williams (i)"
+    joined_df.loc[(joined_df['Player']=='Reggie Williams') & (joined_df['Season'] > 1998),'Player']= "Reggie Williams (ii)"
+
+    #Tim Hardaway Splits
+    joined_df.loc[(joined_df['Player']=='Tim Hardaway') & (joined_df['Season'] < 2004),'Player']= "Tim Hardaway (i)"
+    joined_df.loc[(joined_df['Player']=='Tim Hardaway') & (joined_df['Season'] > 2004),'Player']= "Tim Hardaway (ii)"
+
     return joined_df.sort_values(['Player', 'Season'], ascending=[True, True])
 
 
@@ -207,4 +264,4 @@ def add_years_in_league(df_seasonal, df_demographic):
     #Dropped the name and year_start--don't think it makes sense to duplicate the name and year_start repeats
     joinedup.drop(['name','year_start'],axis=1,inplace=True)
 
-    return joinedup 
+    return joinedup

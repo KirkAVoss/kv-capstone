@@ -486,8 +486,8 @@ Bobby Brown,2009,2018,G,6-2,175,"September 24, 1984","California State Universit
 Chucky Brown,1990,2002,F,6-7,214,"February 29, 1968",North Carolina State University
 Damone Brown,2002,2005,F,6-9,200,"June 28, 1979",Syracuse University
 Darrell Brown,1949,1949,F,6-2,175,"March 14, 1923",Humboldt State University
-Dee Brown,1991,2002,G,6-1,160,"November 29, 1968",Jacksonville University
-Dee Brown,2007,2009,G,6-0,185,"August 17, 1984",University of Illinois at Urbana-Champaign
+Dee Brown (i),1991,2002,G,6-1,160,"November 29, 1968",Jacksonville University
+Dee Brown (ii),2007,2009,G,6-0,185,"August 17, 1984",University of Illinois at Urbana-Champaign
 Derrick Brown,2010,2012,F,6-7,225,"September 8, 1987",Xavier University
 Devin Brown,2003,2010,G,6-5,220,"December 30, 1978",University of Texas at San Antonio
 Ernest Brown,2002,2002,C,7-0,244,"May 17, 1979",Indian Hills Community College
@@ -1189,8 +1189,8 @@ Mike Evans,1980,1988,G,6-1,170,"April 19, 1955",Kansas State University
 Reggie Evans,2003,2015,F,6-8,245,"May 18, 1980",University of Iowa
 Tyreke Evans,2010,2018,G-F,6-6,220,"September 19, 1989",University of Memphis
 Daniel Ewing,2006,2007,G,6-3,185,"March 26, 1983",Duke University
-Patrick Ewing,1986,2002,C-F,7-0,240,"August 5, 1962",Georgetown University
-Patrick Ewing,2011,2011,F,6-8,235,"May 20, 1984",Georgetown University
+Patrick Ewing (i),1986,2002,C-F,7-0,240,"August 5, 1962",Georgetown University
+Patrick Ewing (ii),2011,2011,F,6-8,235,"May 20, 1984",Georgetown University
 Dante Exum,2015,2017,G,6-6,190,"July 13, 1995",
 Christian Eyenga,2011,2012,F,6-5,210,"June 22, 1989",
 Festus Ezeli,2013,2016,C,6-11,255,"October 21, 1989",Vanderbilt University
@@ -1624,8 +1624,8 @@ Reggie Hanson,1998,1998,F,6-8,195,"October 6, 1968",University of Kentucky
 Bill Hanzlik,1981,1990,G-F,6-7,185,"December 6, 1957",University of Notre Dame
 Luke Harangody,2011,2012,F,6-8,246,"January 2, 1988",University of Notre Dame
 Anfernee Hardaway,1994,2008,G-F,6-7,195,"July 18, 1971",University of Memphis
-Tim Hardaway,1990,2003,G,6-0,175,"September 1, 1966",University of Texas at El Paso
-Tim Hardaway,2014,2018,G,6-6,205,"March 16, 1992",University of Michigan
+Tim Hardaway (i),1990,2003,G,6-0,175,"September 1, 1966",University of Texas at El Paso
+Tim Hardaway (ii),2014,2018,G,6-6,205,"March 16, 1992",University of Michigan
 James Harden,2010,2018,G,6-5,220,"August 26, 1989",Arizona State University
 Reggie Harding,1964,1968,C,7-0,249,"May 4, 1942",
 Charlie Hardnett,1963,1965,F-C,6-8,225,"September 13, 1938",Grambling State University
@@ -1952,8 +1952,8 @@ Gene James,1949,1951,F,6-4,180,"February 15, 1925",Marshall University
 Henry James,1991,1998,F,6-8,220,"July 29, 1965",St. Mary's University
 Jerome James,1999,2009,C,7-0,300,"November 17, 1975",Florida Agricultural and Mechanical University
 LeBron James,2004,2018,F-G,6-8,250,"December 30, 1984",
-Mike James,2002,2014,G,6-2,188,"June 23, 1975",Duquesne University
-Mike James,2018,2018,G,6-1,189,"August 18, 1990",Lamar University
+Mike James (i),2002,2014,G,6-2,188,"June 23, 1975",Duquesne University
+Mike James (ii),2018,2018,G,6-1,189,"August 18, 1990",Lamar University
 Tim James,2000,2002,F,6-7,212,"December 26, 1976",University of Miami
 Antawn Jamison,1999,2014,F,6-8,223,"June 12, 1976",University of North Carolina
 Harold Jamison,2000,2002,F,6-8,260,"November 20, 1976",Clemson University
@@ -1998,8 +1998,8 @@ Buck Johnson,1987,1993,F,6-7,190,"January 3, 1964",University of Alabama
 Carldell Johnson,2012,2012,G,5-10,180,"January 28, 1983",University of Alabama at Birmingham
 Charles Johnson,1973,1979,G,6-0,170,"March 31, 1949",University of California
 Cheese Johnson,1980,1980,F-G,6-6,195,"September 7, 1957",Wichita State University
-Chris Johnson,2011,2013,C,6-11,210,"July 15, 1985",Louisiana State University
-Chris Johnson,2013,2016,F-G,6-6,206,"April 29, 1990",University of Dayton
+Chris Johnson (i),2011,2013,C,6-11,210,"July 15, 1985",Louisiana State University
+Chris Johnson (ii),2013,2016,F-G,6-6,206,"April 29, 1990",University of Dayton
 Clay Johnson,1982,1984,G,6-4,175,"July 18, 1956",University of Missouri
 Clemon Johnson,1979,1988,C-F,6-10,240,"September 12, 1956",Florida Agricultural and Mechanical University
 Dakari Johnson,2018,2018,C,7-0,255,"September 22, 1995",University of Kentucky
@@ -2064,9 +2064,8 @@ Bill Jones,1989,1989,F,6-7,175,"March 18, 1966",University of Iowa
 Bobby Jones,1975,1986,F,6-9,210,"December 18, 1951",University of North Carolina
 Bobby Jones,2007,2008,F,6-7,215,"January 9, 1984",University of Washington
 Caldwell Jones,1974,1990,C-F,6-11,217,"August 4, 1950",Albany State University
-Charles Jones,1984,1998,F-C,6-9,215,"April 3, 1957",Albany State University
-Charles Jones,1985,1989,F,6-8,215,"January 12, 1962",University of Louisville
-Charles Jones,1999,2000,G,6-3,180,"July 17, 1975",Long Island University
+Charles Jones (i),1984,1998,F-C,6-9,215,"April 3, 1957",Albany State University
+Charles Jones (ii),1999,2000,G,6-3,180,"July 17, 1975",Long Island University
 Collis Jones,1972,1975,F,6-7,203,"July 3, 1949",University of Notre Dame
 Dahntay Jones,2004,2017,G-F,6-6,225,"December 27, 1980",Duke University
 Damian Jones,2017,2018,F-C,7-0,245,"June 30, 1995",Vanderbilt University
@@ -3144,8 +3143,8 @@ Cameron Payne,2016,2017,G,6-3,185,"August 8, 1994",Murray State University
 Kenny Payne,1990,1993,F-G,6-8,195,"November 25, 1966",University of Louisville
 Tom Payne,1972,1972,C,7-2,240,"November 19, 1950",University of Kentucky
 Elfrid Payton,2015,2018,G,6-4,185,"February 22, 1994",University of Louisiana at Lafayette
-Gary Payton,1991,2007,G,6-4,180,"July 23, 1968",Oregon State University
-Gary Payton,2017,2018,G,6-3,190,"December 1, 1992",Oregon State University
+Gary Payton (i),1991,2007,G,6-4,180,"July 23, 1968",Oregon State University
+Gary Payton (ii),2017,2018,G,6-3,190,"December 1, 1992",Oregon State University
 Mel Payton,1952,1953,F-G,6-4,185,"July 16, 1926",Tulane University
 George Pearcy,1947,1947,G,6-1,165,"July 2, 1919",Indiana State University
 Henry Pearcy,1947,1947,G,6-1,170,"July 21, 1922",Indiana State University
@@ -3367,8 +3366,8 @@ Jerry Reynolds,1986,1996,G-F,6-8,200,"December 23, 1962",Louisiana State Univers
 Kendall Rhine,1968,1969,C,6-10,230,"February 13, 1943",Rice University
 Gene Rhodes,1953,1953,G,6-1,170,"September 2, 1927",Western Kentucky University
 Rodrick Rhodes,1998,2000,G-F,6-6,225,"September 24, 1973",University of Southern California
-Glen Rice,1990,2004,F,6-7,215,"May 28, 1967",University of Michigan
-Glen Rice,2014,2015,G,6-6,206,"January 1, 1991",Georgia Institute of Technology
+Glen Rice (i),1990,2004,F,6-7,215,"May 28, 1967",University of Michigan
+Glen Rice (ii),2014,2015,G,6-6,206,"January 1, 1991",Georgia Institute of Technology
 Chris Richard,2008,2010,F,6-9,270,"December 25, 1984",University of Florida
 Clint Richardson,1980,1987,G,6-3,195,"August 7, 1956",Seattle University
 Jason Richardson,2002,2015,G,6-6,220,"January 20, 1981",Michigan State University
@@ -3428,8 +3427,8 @@ Clifford Robinson,1990,2007,F-C,6-10,225,"December 16, 1966",University of Conne
 David Robinson,1990,2003,C,7-1,235,"August 6, 1965",United States Naval Academy
 Eddie Robinson,2000,2004,G-F,6-8,210,"April 19, 1976",University of Central Oklahoma
 Flynn Robinson,1967,1974,G,6-1,185,"April 28, 1941",University of Wyoming
-Glenn Robinson,1995,2005,F,6-7,225,"January 10, 1973",Purdue University
-Glenn Robinson,2015,2017,G-F,6-6,222,"January 8, 1994",University of Michigan
+Glenn Robinson (i),1995,2005,F,6-7,225,"January 10, 1973",Purdue University
+Glenn Robinson (ii),2015,2017,G-F,6-6,222,"January 8, 1994",University of Michigan
 Jackie Robinson,1979,1982,F,6-6,210,"May 20, 1955","University of Nevada, Las Vegas"
 Jamal Robinson,2001,2001,F,6-7,212,"December 27, 1973",University of Virginia
 James Robinson,1994,2001,G,6-2,180,"August 31, 1970",University of Alabama
@@ -3731,9 +3730,8 @@ Al Smith,1972,1976,G,6-1,185,"January 15, 1947",Bradley University
 Bill Smith,1962,1962,G-F,6-5,190,"April 26, 1939",Saint Peter's College
 Bingo Smith,1970,1980,F-G,6-5,195,"February 26, 1946",University of Tulsa
 Bobby Smith,1960,1962,G,6-4,190,"August 20, 1937",West Virginia University
-Charles Smith,1989,1997,F-C,6-10,230,"July 16, 1965",University of Pittsburgh
-Charles Smith,1990,1996,G,6-1,160,"November 29, 1967",Georgetown University
-Charles Smith,1998,2006,G,6-4,194,"August 22, 1975",University of New Mexico
+Charles Smith (i),1989,1997,F-C,6-10,230,"July 16, 1965",University of Pittsburgh
+Charles Smith (ii),1998,2006,G,6-4,194,"August 22, 1975",University of New Mexico
 Chris Smith,1993,1995,G,6-3,190,"May 17, 1970",University of Connecticut
 Chris Smith,2014,2014,G,6-2,200,"October 13, 1987",University of Louisville
 Clinton Smith,1987,1991,F,6-6,210,"January 19, 1964",Cleveland State University
@@ -4391,8 +4389,8 @@ Kenny Williams,1991,1994,F,6-9,205,"June 9, 1969",Elizabeth City State Universit
 Kevin Williams,1984,1989,G,6-2,175,"September 11, 1961",St. John's University
 Lorenzo Williams,1993,2000,F-C,6-9,200,"July 15, 1969",Stetson University
 Lou Williams,2006,2018,G,6-1,175,"October 27, 1986",
-Marcus Williams,2007,2010,G,6-3,205,"December 3, 1985",University of Connecticut
-Marcus Williams,2008,2009,F,6-7,205,"November 18, 1986",University of Arizona
+Marcus Williams (i),2007,2010,G,6-3,205,"December 3, 1985",University of Connecticut
+Marcus Williams (ii),2008,2009,F,6-7,205,"November 18, 1986",University of Arizona
 Marvin Williams,2006,2018,F,6-9,237,"June 19, 1986",University of North Carolina
 Matt Williams,2018,2018,G,6-5,210,"October 14, 1993",University of Central Florida
 Micheal Williams,1989,1999,G,6-2,175,"July 23, 1966",Baylor University
@@ -4403,8 +4401,8 @@ Monty Williams,1995,2003,F,6-8,225,"October 8, 1971",University of Notre Dame
 Nate Williams,1972,1979,F-G,6-5,215,"May 2, 1950",Utah State University
 Pete Williams,1986,1987,F,6-7,190,"March 10, 1965",University of Arizona
 Ray Williams,1978,1987,G,6-3,188,"October 14, 1954",University of Minnesota
-Reggie Williams,1988,1997,F-G,6-7,190,"March 5, 1964",Georgetown University
-Reggie Williams,2010,2017,F,6-6,205,"September 14, 1986",Virginia Military Institute
+Reggie Williams (i),1988,1997,F-G,6-7,190,"March 5, 1964",Georgetown University
+Reggie Williams (ii),2010,2017,F,6-6,205,"September 14, 1986",Virginia Military Institute
 Rickey Williams,1983,1983,G,6-1,175,"March 12, 1957","California State University, Long Beach"
 Rob Williams,1983,1984,G,6-2,175,"May 5, 1961",University of Houston
 Ron Williams,1969,1976,G,6-3,188,"September 24, 1944",West Virginia University
@@ -4494,8 +4492,8 @@ Antoine Wright,2006,2011,G-F,6-7,210,"February 6, 1984",Texas A&M University
 Bracey Wright,2006,2007,G,6-3,210,"July 1, 1984",Indiana University
 Brad Wright,1987,1988,F,6-11,225,"March 26, 1962","University of California, Los Angeles"
 Brandan Wright,2008,2018,F-C,6-10,210,"October 5, 1987",University of North Carolina
-Chris Wright,2012,2014,F,6-8,226,"September 30, 1988",University of Dayton
-Chris Wright,2013,2013,G,6-1,210,"November 4, 1989",Georgetown University
+Chris Wright (i),2012,2014,F,6-8,226,"September 30, 1988",University of Dayton
+Chris Wright (ii),2013,2013,G,6-1,210,"November 4, 1989",Georgetown University
 Delon Wright,2016,2018,G,6-5,183,"April 26, 1992",University of Utah
 Dorell Wright,2005,2015,F-G,6-9,205,"December 2, 1985",
 Howard Wright,1991,1993,F,6-8,220,"December 20, 1967",Stanford University
