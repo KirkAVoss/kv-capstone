@@ -176,3 +176,35 @@ def read_demographic_data(filename):
     '''
     df = pd.read_csv(filename)
     return df
+
+
+def add_years_in_league(df_seasonal, df_demographic):
+    '''
+    Adds the number of years the player has been in the league to the seasonal dataframe.
+    Calculates the delta from the demo database
+    Inputs: df_seasonal -- the output of the clean_and_join_seasonal_dataframe function
+            df_demographic -- the output of the read_demographic_data function
+
+    Returns: df_seasonal_plus_years_in_league
+
+    '''
+    #Was going to loop through and get unique names, realized that could be obviated by left-join
+    #names_in_demo = set(df_demographic['name'].unique())
+    #names_in_seaonal = set(df_seasonal['Player'].unique())
+
+    #Left merge the two dataframes on player name, which exclude the old-timers that aren't in 1997+
+    joinedup = pd.merge(df_seasonal, df_demographic.loc[:,['name', 'year_start']], how='left', left_on=['Player'], right_on = ['name'])
+
+    #The players that aren't in the demo table are 1st year G-league-level guys
+    joinedup.loc[joinedup['year_start'].isnull(),'year_start']= 2018
+    #Cast the year_start column to int because Pandas is goofy
+    joinedup['year_start'] = joinedup['year_start'].astype(int)
+
+    #Get the season number in the table, which is just the number of years the player has been in the league
+    #Note that the player's rookie year starts at 1
+    joinedup['Seasons_number'] = joinedup['Season'] - joinedup['year_start'] + 1
+
+    #Dropped the name and year_start--don't think it makes sense to duplicate the name and year_start repeats
+    joinedup.drop(['name','year_start'],axis=1,inplace=True)
+
+    return joinedup 
