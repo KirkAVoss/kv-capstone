@@ -105,13 +105,14 @@ class SeasonalRegressor():
             to_predict_dataframe.drop(player,inplace=True)
 
         #Do some checking to make sure we didn't screw up
-        trainidx = set(df_season4_reduced.index.values)
+        trainidx = set(df_season_4_reduced.index.values)
         predictidx = set(to_predict_dataframe.index.values)
-        if not trainidx^predictidx:
-            print("Something went wrong with the indices (1):", trainidx^predictidx)
+        #if not trainidx^predictidx:
+        #    print("Something went wrong with the indices (1):", trainidx^predictidx)
+        #    return None
+        if not (df_season_4_reduced.index.equals(to_predict_dataframe.index)):
+            print("Something went wrong with indices (2)--don't equal each other")
             return None
-        elif not (d4_season4_reduced.index.equals(to_predict_dataframe.index):
-            print("Something we wrong with indices (2)")
 
         #return the dataframes
         return df_season_4_reduced, to_predict_dataframe
