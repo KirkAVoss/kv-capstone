@@ -222,6 +222,11 @@ def clean_and_join_seasonal_dataframe(df_advanced, df_pergame):
     joined_df.loc[(joined_df['Player']=='Tim Hardaway') & (joined_df['Season'] < 2004),'Player']= "Tim Hardaway (i)"
     joined_df.loc[(joined_df['Player']=='Tim Hardaway') & (joined_df['Season'] > 2004),'Player']= "Tim Hardaway (ii)"
 
+    #Tony Mitchell Splits (both played in 2014)
+    joined_df.loc[(joined_df['Player']=='Tony Mitchell') & (joined_df['Tm'] == 'DET'),'Player']= "Tony Mitchell (92)"
+    joined_df.loc[(joined_df['Player']=='Tony Mitchell') & (joined_df['Tm'] == 'MIL'),'Player']= "Tony Mitchell (89)"
+
+
     return joined_df.sort_values(['Player', 'Season'], ascending=[True, True])
 
 
