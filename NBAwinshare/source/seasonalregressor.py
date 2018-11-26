@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from collections import defaultdict
 from sklearn.ensemble import RandomForestRegressor
 #from sklearn.model_selection import train_test_split
 #from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
@@ -15,14 +16,16 @@ class SeasonalRegressor():
     '''
 
 
-    def __init__(self, regressor_type='RF'):
+    def __init__(self, regressor_type='RF', columns_to_train='all'):
         '''
         Instantiates a model
         Input: regressor_type -- type of regressor used in the prediction algo, defaults to random forest (only option operative)
+                columnes_to_train -- the columns used to train the model
         '''
         #these are the years to predict
         self.years_to_predict = [5, 6, 7, 8, 9]
         self.regressor_dict = {}
+        self.columns_to_train = columns_to_train
         for year in self.years_to_predict:
             if regressor_type == 'RF':
                 #Need to figure out how to pass arguments to this thing for grid search purposes
@@ -31,7 +34,7 @@ class SeasonalRegressor():
                 print("Don't know what to do with this, sorry, chief.")
 
 
-    def fit(self, df_fullstats, df_demographic, columns_to_train='all', col_to_predict='WS'):
+    def fit(self, df_fullstats, df_demographic, col_to_predict='WS'):
         '''
         Fits the df_fullstats data to the regressor dictionary
 
@@ -52,7 +55,7 @@ class SeasonalRegressor():
         for year in self.years_to_predict:
             #Create an X and y for each year.  Note the year-1
             X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
-            col_to_predict = col_to_predict, columns_to_train = columns_to_train, last_train_season= year-1)
+            col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
             print("Fitting for year:", year)
             #Fit the regressor at each year
             self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
@@ -60,14 +63,31 @@ class SeasonalRegressor():
         return self
 
 
-    def predict(self, X):
+    def predict(self, df_fouryearstats):
         '''
-        Predict win-shares for X, which should have the first-4 years of a player's career
-        Returns y (predictions)
+        Predict win-shares (by default) for df_fouryearstats, which should have the first-4 years of a player's career
+        df_fouryearsstats -- input dataframe with player seasons 1-4, Each season on a different row, with 'Player' as a column,
+            not the index.
+
+        Returns y (prediction dictionary with player name as 'key' and list of predictions as 'values')
 
         '''
-        #run the model for each regressor
-        pass
+        predictions = defaultdict(list)
+        #This functionality should mirror what I do in create_train_and_predict
+        #Mean should be replaced with a custom function
+        playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
+        players = set(playerframe.index)
+
+        #Doing nested for-loop so that I can easily keep predictions together
+        for year in self.years_to_predict:
+            #For each player
+            for player in players:
+                print("Predicting year:", year, "for player: ",player)
+                #Call the regressor for each year,
+                predictions[player].append(self.regressor_dict[year].predict(playerframe.loc[player,self.columns_to_train]))
+
+
+        return predictions
 
     def create_train_and_predict_X_and_y_from_seasons_4_and_5(self, df_season_4, \
         df_season_5, demographic, columns_to_train, col_to_predict='WS'):
@@ -189,7 +209,7 @@ class SeasonalRegressor():
         print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
 
 
-        #Get the player0-rows that we want to train and predict upon.  This step could be combined with the next two below,
+        #Get the player-rows that we want to train and predict upon.  This step could be combined with the next two below,
         #but I include for readability
         df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  (df_fullstats['Seasons_number'] <= last_train_season + 1)]
 
