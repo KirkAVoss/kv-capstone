@@ -155,17 +155,19 @@ class SeasonalRegressor():
         seasons_needed.add(season_to_predict)
 
         count = 0
-        players_with_fulldata = {}
+        players_with_fulldata = set()
 
         #for every unique player in fullstats, let's figure out who we have data for in years: 1-last_train_season
         for player in df_fullstats['Player'].unique():
             #get the Season_numbers we have per player
-            playerset = set(fullstats.loc[fullstats['Player']==player, 'Seasons_number'])
+            playerset = set(df_fullstats.loc[df_fullstats['Player']==player, 'Seasons_number'])
             #if the player has every year, append to the set of full players
             if seasons_needed.issubset(playerset):
-                print("Have full-year stats ",player)
+                #print("Have full-year stats ",player)
                 players_with_fulldata.add(player)
                 count += 1
+        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
+
 
         #Get the player0-rows that we want to train and predict upon.  This step could be combined with the next two below,
         #but I include for readability
@@ -179,6 +181,7 @@ class SeasonalRegressor():
 
         #Here is where I want to apply a custom function, something more heavily weighted towards most recent
         #seasons.  Currently, I just use the built-in groupby-mean.  That doesn't capture trajectories very well.
+        #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
         df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
 
         #Re-index the predict frame
@@ -186,19 +189,21 @@ class SeasonalRegressor():
 
         #Error checking, make sure indices are good
         if df_transformed_train.index.equals(df_reindexed_predict.index):
-            print("Indices of train set and to-predict set match")
+            print("Indices of train set and to-predict set MATCH")
         else:
-            print("Indices of train set and to-predict do not match:")
-            print(df_transformed_train.index.difference(f_reindexed_predict.index))
+            print("Indices of train set and to-predict DO NOT match:")
+            print(df_transformed_train.index.difference(df_reindexed_predict.index))
             return (None, None, None)
 
+        #filter the columns
         if columns_to_train == "all":
             print("Using all columns")
-            X = df_transformed_train.values
+            X = df_transformed_train
         else:
             print("Using columns: ",columns_to_train)
-            X = df_transformed_train[columns_to_train].values
+            X = df_transformed_train[columns_to_train]
 
+        #grab the column to predict as y
         y = df_reindexed_predict.pop(col_to_predict)
 
         return X, y, players_with_fulldata
