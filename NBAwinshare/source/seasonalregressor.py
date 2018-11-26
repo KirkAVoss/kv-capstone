@@ -10,6 +10,9 @@ from sklearn.ensemble import RandomForestRegressor
 #import pickle
 
 class SeasonalRegressor():
+    '''
+    Creates a Seasonal Regressor object
+    '''
 
 
     def __init__(self, regressor_type='RF'):
@@ -47,7 +50,7 @@ class SeasonalRegressor():
         pass
 
     def create_train_and_predict_X_and_y_from_seasons_4_and_5(self, df_season_4, \
-        df_season_5, columns_to_train, col_to_predict='WS'):
+        df_season_5, demographic, columns_to_train, col_to_predict='WS'):
         '''
         This function takes the seasonal information from year 4 (all players and all
         season-4's) and creates an "X" dataframe, and a "y" dataframe for use with training
@@ -56,6 +59,8 @@ class SeasonalRegressor():
                 ***NOTE*** Shouldn't have previous year stats
                 df_season_5 -- a dataframe filtered to only have year-5 data
                     should NOT have player name as index, it should be in 'Player'
+
+                demographic -- should be the demographic database read in via data_wrangle
                 ***NOTE*** Shouldn't have previous year stats
                 columns_to_train -- a list of columns, from within df_season_4 to train on
                 col_to_predict -- The column we are trying to predict from df_season_5: 'WS' by default
