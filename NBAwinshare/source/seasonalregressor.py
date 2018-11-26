@@ -20,33 +20,53 @@ class SeasonalRegressor():
         Instantiates a model
         Input: regressor_type -- type of regressor used in the prediction algo, defaults to random forest (only option operative)
         '''
+        #these are the years to predict
         self.years_to_predict = [5, 6, 7, 8, 9]
         self.regressor_dict = {}
         for year in self.years_to_predict:
-            self.regressor_dict[year] = RandomForestRegressor(n_jobs=-1)
+            if regressor_type == 'RF':
+                #Need to figure out how to pass arguments to this thing for grid search purposes
+                self.regressor_dict[year] = RandomForestRegressor(n_jobs = -1, oob_score = True, n_estimators = 100)
+            else:
+                print("Don't know what to do with this, sorry, chief.")
 
 
-    def fit(self, X, y):
+    def fit(self, df_fullstats, df_demographic, columns_to_train='all', col_to_predict='WS'):
         '''
-        Fit X and Y to the regressor'
+        Fits the df_fullstats data to the regressor dictionary
+
+        Inputs: df_fullstats -- a dataframe that has all data player data in it .
+                    Should be result of data_wrangle.add_years_in_league
+                    Should NOT have player name as index, it should be in a 'Player'
+
+                df_demographic -- should be the demographic dataframe read in via data_wrangle
+
+                columns_to_train -- a list of columns, from within fullstats to train on.  Defaults to 'all'
+
+                col_to_predict -- The column we are trying to predict from df_fullstats['Season_number']==(last_train_season +  1): 'WS' by default
+
+
         Returns self
         '''
-
-        #need to fit the regressor for each year, which means I either need to break up the train data in acceptable year windows, or handle that here
-        #Also need to make sure test / train split has various
-        #Random Forest Fit
-
+        #Fit every year in years to predict
+        for year in self.years_to_predict:
+            #Create an X and y for each year.  Note the year-1
+            X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
+            col_to_predict = col_to_predict, columns_to_train = columns_to_train, last_train_season= year-1)
+            print("Fitting for year:", year)
+            #Fit the regressor at each year
+            self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
 
         return self
 
 
     def predict(self, X):
         '''
-        Predict win-shares for X.
+        Predict win-shares for X, which should have the first-4 years of a player's career
         Returns y (predictions)
 
         '''
-        #run the model for each classifier
+        #run the model for each regressor
         pass
 
     def create_train_and_predict_X_and_y_from_seasons_4_and_5(self, df_season_4, \
