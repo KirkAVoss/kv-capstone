@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from collections import defaultdict
 from sklearn.ensemble import RandomForestRegressor
+import matplotlib.pyplot as plt
 #from sklearn.model_selection import train_test_split
 #from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 #from sklearn.linear_model import LogisticRegression
@@ -277,6 +278,32 @@ class SeasonalRegressor():
         df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  (df_fullstats['Seasons_number'] <= season)]
 
         return df_only_full_players
+
+
+    def plot_player_arc(self, playername, predictions, predseasons= [5,6,7,8,9], actuals=None, actualseasons=None):
+        '''
+        Plots the player arc based on predictions
+        Inputs: playername - string - player name for the predictions
+                predictions - array of predicted values (Win Shares)
+                seasons - the seasons (x-axis)
+                actuals - array of actual values to plot against the predicted values
+        '''
+        plt.title('WinShare Predictions for ' + playername + '')
+        plt.ylabel('Win Shares')
+        plt.xlabel('Seasons')
+
+
+        #plot the predicted seasons
+        plt.plot(predseasons, predictions)
+        if actuals:
+            plt.plot(actualseasons, actuals)
+            plt.xticks(actualseasons)
+        else:
+            plt.xticks(predseasons)
+
+        plt.legend(['Predictions', 'Actuals'], loc='upper right')
+        plt.show()
+
 
 
 
