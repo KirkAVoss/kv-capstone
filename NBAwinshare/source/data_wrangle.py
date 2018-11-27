@@ -270,3 +270,20 @@ def add_years_in_league(df_seasonal, df_demographic):
     joinedup.drop(['name','year_start'],axis=1,inplace=True)
 
     return joinedup
+
+
+def get_actuals_for_first_x_years(df_fullstats, playername, seasons=9, col = 'WS'):
+    '''
+    Get the actual values for plotting purposes
+
+    Inputs -- df_fullstats - pandas dataframe - the fully joined seasonal database
+              playername - string - the player whose stats to be retreived
+              seasons - integer - will retrieve stats for seasons 1-seasons
+              col - string - column of stats to be retrieved, defaults to win-shares
+
+    Returns x, y
+            x - numpy array of season numbers
+            y - numpy array of predicted column
+    '''
+    frame = df_fullstats.loc[(df_fullstats['Player']==playername) & (df_fullstats['Seasons_number'] <= seasons), ['Seasons_number', col]]
+    return frame['Seasons_number'].values, frame[col].values

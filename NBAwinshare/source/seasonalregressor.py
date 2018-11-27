@@ -279,7 +279,7 @@ class SeasonalRegressor():
 
         return df_only_full_players
 
-
+    #Could probably move this function out of the class, or at least make static
     def plot_player_arc(self, playername, predictions, predseasons= [5,6,7,8,9], actuals=None, actualseasons=None):
         '''
         Plots the player arc based on predictions
@@ -295,7 +295,7 @@ class SeasonalRegressor():
 
         #plot the predicted seasons
         plt.plot(predseasons, predictions)
-        if actuals:
+        if actuals.any():
             plt.plot(actualseasons, actuals)
             plt.xticks(actualseasons)
         else:
