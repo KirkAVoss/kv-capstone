@@ -28,6 +28,7 @@ class SeasonalRegressor():
         self.regressor_dict = {}
         self.columns_to_train = columns_to_train
         self.column_names = None
+        self.players_with_fulldata = {}
         for year in self.years_to_predict:
             if regressor_type == 'RF':
                 #Need to figure out how to pass arguments to this thing for grid search purposes
@@ -35,10 +36,43 @@ class SeasonalRegressor():
             else:
                 print("Don't know what to do with this, sorry, chief.")
 
-
-    def fit(self, df_fullstats, df_demographic, col_to_predict='WS'):
+    def fit(self, df_fullstats, col_to_predict='WS'):
         '''
-        Fits the df_fullstats data to the regressor dictionary
+        Fits the df_fullstats data to the regressor dictionary objects
+
+        Inputs: df_fullstats -- a dataframe that has all data player data in it .
+                    Should be result of data_wrangle.add_years_in_league
+                    Should NOT have player name as index, it should be in a 'Player'
+
+                columns_to_train -- a list of columns, from within fullstats to train on.  Defaults to 'all'
+
+                col_to_predict -- The column we are trying to predict from df_fullstats['Season_number']==(last_train_season +  1): 'WS' by default
+
+
+        Returns self
+        '''
+        #Fit every year in years to predict
+        for year in self.years_to_predict:
+            #Create an X and y for each year.  Note the year-1 used as the argument on last_train_season
+            X, y, fullplayers = self.create_train_and_predict_X_and_y_of_first_four_seasons(df_fullstats, \
+            year, col_to_predict = col_to_predict, columns_to_train = self.columns_to_train)
+            self.players_with_fulldata[year] = fullplayers
+
+            #This is the old, bad methodology
+            #X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
+            #col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
+            print("Fitting for year:", year)
+            #Fit the regressor at each year
+            self.column_names = list(X.columns)
+            self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
+
+        return self
+
+
+
+    def fit_bad(self, df_fullstats, df_demographic, col_to_predict='WS'):
+        '''
+        Fits the df_fullstats data to the regressor dictionary.  Shouldn't use this method, it isn't based on just years 1-4
 
         Inputs: df_fullstats -- a dataframe that has all data player data in it .
                     Should be result of data_wrangle.add_years_in_league
@@ -335,7 +369,96 @@ class SeasonalRegressor():
         pass
 
 
+    def create_train_and_predict_X_and_y_of_first_four_seasons(self, df_fullstats, \
+    year_to_predict, columns_to_train='all', col_to_predict='WS'):
+        '''
+        This function takes the seasonal information from years 1-4 and creates an "X" dataframe,
+        and a "y" dataframe for use with training.  The "y" dataframe will be the predicted year stat
+        Inputs: df_fullstats -- a dataframe that has all data player data in it.
+                    Should be result of data_wrangle.add_years_in_league
+                    Should NOT have player name as index, that info should be in a 'Player'
 
+                year_to_predict - should be the year to predict a specific stats.  Should be in interval [5,9]
+
+                columns_to_train -- a list of columns, from within fullstats to train on.  Defaults to all
+
+                col_to_predict -- The column we are trying to predict from df_fullstats['Season_number']==(year_to_predict): 'WS' by default
+
+        Returns X - dataframe reduced to columns_to_train that has corresponding values in Y
+                y - dataframe containing the col_to_predict, where previous year players are in X
+                players - set of player names that have full data for years 1-last_train_season+1
+        '''
+
+        #Currently, functionality requires data for years 1-4, plus the predict year.
+        seasons_needed = set(range(1,4+1)) #range isn't inclusive by default on the ride side of the interval
+        seasons_only_for_train = set(range(1,4+1))
+        season_to_predict = year_to_predict
+        seasons_needed.add(season_to_predict)
+
+        count = 0
+        players_with_fulldata = set()
+
+        #for every unique player in fullstats, let's figure out who we have data for in years: 1-4, and season_to_predict
+        for player in df_fullstats['Player'].unique():
+            #get the Season_numbers we have per player
+            playerset = set(df_fullstats.loc[df_fullstats['Player']==player, 'Seasons_number'])
+            #if the player has every year, append to the set of full players
+            if seasons_needed.issubset(playerset):
+                #print("Have full-year stats ",player)
+                players_with_fulldata.add(player)
+                count += 1
+        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
+
+        #Get the player-rows that we want to train and predict upon.  This step could be combined with the next two below,
+        #but I include for readability
+        df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  \
+        ((df_fullstats['Seasons_number'] <= 4) | (df_fullstats['Seasons_number'] == season_to_predict))]
+
+        #Just want the train set (Seasons 1-4)
+        df_full_train = df_only_full_players[df_only_full_players['Seasons_number'] <=  4]
+
+        #Get the to-predict set (season_to_predict)
+        df_full_predict = df_only_full_players[df_only_full_players['Seasons_number'] ==  season_to_predict]
+
+        #Here is where I want to apply a custom function, something more heavily weighted towards most recent
+        #seasons.  Currently, I just use the built-in groupby-mean.  That doesn't capture trajectories very well.
+        #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
+        df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+
+        #Re-index the predict frame
+        df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
+
+        #Error checking, make sure indices are good
+        if df_transformed_train.index.equals(df_reindexed_predict.index):
+            print("Indices of train set and to-predict set MATCH")
+        else:
+            print("Indices of train set and to-predict DO NOT match:")
+            print(df_transformed_train.index.difference(df_reindexed_predict.index))
+            return (None, None, None)
+
+        #filter the columns
+        if columns_to_train == "all":
+            print("Using all columns")
+            X = df_transformed_train
+        else:
+            print("Using columns: ",columns_to_train)
+            X = df_transformed_train[columns_to_train]
+
+        #grab the column to predict as y
+        y = df_reindexed_predict.pop(col_to_predict)
+
+        return X, y, players_with_fulldata
+
+    def create_train_test_split(self, df_fullstats, trainplayers, testplayers):
+        '''
+        Create a train_test_split for df_fullstats DataFrame
+        trainplayers -- read in from pkl object, list of players for training
+        testplayers -- read in from pkl object, list of players for testing
+        '''
+        trainframe = df_fullstats[df_fullstats['Player'].isin(trainplayers)]
+        testframe  = df_fullstats[df_fullstats['Player'].isin(testplayers)]
+
+        return trainframe, testframe
 
 
 
