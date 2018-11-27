@@ -305,6 +305,34 @@ class SeasonalRegressor():
 
         plt.legend(['Predictions', 'Actuals'], loc='upper right')
         plt.show()
+        pass
+
+    def plot_feature_importances(self, year_to_plot):
+        '''
+        Plots the feature importances
+
+        Input -- year_to_plot - integer - the regressor predictor year to use
+        '''
+
+        importances = self.regressor_dict[year_to_plot].feature_importances_
+        indices = np.argsort(importances)[::-1]
+        # Print the feature ranking
+        print("Feature ranking:")
+
+        sortedcolnames = [self.column_names[idx] for idx in indices]
+
+        for f in range(len(self.column_names)):
+            print("%d. feature %d | %s | (%f)" % (f + 1, indices[f], self.column_names[indices[f]], importances[indices[f]]))
+
+        # Plot the feature importances of the forest
+        plt.figure(figsize=(20,10))
+        plt.title("Feature importances")
+        plt.bar(range(len(self.column_names)), importances[indices],
+               color="r", align="center")
+        plt.xticks(range(len(self.column_names)), sortedcolnames, rotation='vertical')
+        plt.xlim([-1, len(self.column_names)])
+        plt.show()
+        pass
 
 
 
