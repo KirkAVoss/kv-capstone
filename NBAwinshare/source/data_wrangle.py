@@ -287,3 +287,19 @@ def get_actuals_for_first_x_years(df_fullstats, playername, seasons=9, col = 'WS
     '''
     frame = df_fullstats.loc[(df_fullstats['Player']==playername) & (df_fullstats['Seasons_number'] <= seasons), ['Seasons_number', col]]
     return frame['Seasons_number'].values, frame[col].values
+
+def get_actuals_for_years_5_thru_9(df_fullstats, playernamelist, col = 'WS'):
+    '''
+    Get the actual values for plotting purposes
+
+    Inputs -- df_fullstats - pandas dataframe - the fully joined seasonal database
+              playernamelist - list of strings - the players whose stats to be retreived
+              col - string - column of stats to be retrieved, defaults to win-shares
+
+    Returns y
+            y - numpy array of predicted column
+    '''
+    #Get the seasons between 5-9, for the target column
+    frame = df_fullstats.loc[(df_fullstats['Seasons_number'].between(5,9)) & (df_fullstats['Player'].isin(playernamelist)),['Player','Seasons_number',col]]
+    #Ensure that results are properly sorted, and return the numpy array
+    return frame.sort_values(['Player', 'Seasons_number'])[col].values
