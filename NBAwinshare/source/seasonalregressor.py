@@ -27,6 +27,7 @@ class SeasonalRegressor():
         self.years_to_predict = [5, 6, 7, 8, 9]
         self.regressor_dict = {}
         self.columns_to_train = columns_to_train
+        self.column_names = None
         for year in self.years_to_predict:
             if regressor_type == 'RF':
                 #Need to figure out how to pass arguments to this thing for grid search purposes
@@ -54,11 +55,12 @@ class SeasonalRegressor():
         '''
         #Fit every year in years to predict
         for year in self.years_to_predict:
-            #Create an X and y for each year.  Note the year-1
+            #Create an X and y for each year.  Note the year-1 used as the argument on last_train_season
             X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
             col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
             print("Fitting for year:", year)
             #Fit the regressor at each year
+            self.column_names = list(X.columns)
             self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
 
         return self
