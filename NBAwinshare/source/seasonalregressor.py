@@ -84,7 +84,11 @@ class SeasonalRegressor():
             for player in players:
                 print("Predicting year:", year, "for player: ",player)
                 #Call the regressor for each year,might need to cast to a float
-                predictions[player].append(self.regressor_dict[year].predict(playerframe.loc[player,self.columns_to_train]))
+                #Super-readable?
+                if self.columns_to_train == "all":
+                    predictions[player].append(float(self.regressor_dict[year].predict(playerframe.loc[player,:].values.reshape(1, -1))))
+                else:
+                    predictions[player].append(float(self.regressor_dict[year].predict(playerframe.loc[player,self.columns_to_train].values.reshape(1, -1))))
 
         return predictions
 
@@ -245,7 +249,7 @@ class SeasonalRegressor():
 
         return X, y, players_with_fulldata
 
-    def get_players_first_x_full_years(df_fullstats, season=4):
+    def get_players_first_x_full_years(self, df_fullstats, season=4):
         '''
         Returns the first x years foreach player, if there is full data for that player
 
