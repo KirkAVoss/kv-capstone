@@ -83,9 +83,8 @@ class SeasonalRegressor():
             #For each player
             for player in players:
                 print("Predicting year:", year, "for player: ",player)
-                #Call the regressor for each year,
+                #Call the regressor for each year,might need to cast to a float
                 predictions[player].append(self.regressor_dict[year].predict(playerframe.loc[player,self.columns_to_train]))
-
 
         return predictions
 
@@ -187,8 +186,6 @@ class SeasonalRegressor():
                 players - set of player names that have full data for years 1-last_train_season+1
         '''
 
-
-        #I could just make
         seasons_needed = set(range(1,last_train_season+1))
         seasons_only_for_train = set(range(1,last_train_season+1))
         season_to_predict = last_train_season+1
@@ -248,7 +245,34 @@ class SeasonalRegressor():
 
         return X, y, players_with_fulldata
 
+    def get_players_first_x_full_years(df_fullstats, season=4):
+        '''
+        Returns the first x years foreach player, if there is full data for that player
 
+        Inputs -- seasons that you need the full data
+        '''
+
+        seasons_needed = set(range(1,season+1))
+
+        count = 0
+        players_with_fulldata = set()
+
+        #for every unique player in fullstats, let's figure out who we have data for in years: 1-last_train_season
+        for player in df_fullstats['Player'].unique():
+            #get the Season_numbers we have per player
+            playerset = set(df_fullstats.loc[df_fullstats['Player']==player, 'Seasons_number'])
+            #if the player has every year, append to the set of full players
+            if seasons_needed.issubset(playerset):
+                #print("Have full-year stats ",player)
+                players_with_fulldata.add(player)
+                count += 1
+        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
+
+        #Get the player-rows that we want to predict.  This step could be combined with the next below,
+        #but I include for readability
+        df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  (df_fullstats['Seasons_number'] <= season)]
+
+        return df_only_full_players
 
 
 
