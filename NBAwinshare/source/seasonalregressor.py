@@ -460,6 +460,17 @@ class SeasonalRegressor():
 
         return trainframe, testframe
 
+    def unpack_prediction_dictionary(self, prediction_dictionary):
+        '''
+        Unpacks the prediction dictionary (returned by SeasonalRegressor.predict()) for use with MSE
+        '''
+
+        predictions = []
+        for player in sorted(prediction_dictionary.keys()):
+            predictions += prediction_dictionary[player]
+
+        return predictions
+
 
 
 
