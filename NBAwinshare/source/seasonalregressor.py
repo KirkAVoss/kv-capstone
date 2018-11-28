@@ -3,6 +3,11 @@ import numpy as np
 from collections import defaultdict
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
+
+import os, sys
+sys.path.insert(0, '/Users/kv/workspace/kv-capstone/NBAwinshare/source')
+
+from helper_functions import weighted_mean_one_col_weight as wm
 #from sklearn.model_selection import train_test_split
 #from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 #from sklearn.linear_model import LogisticRegression
@@ -112,7 +117,9 @@ class SeasonalRegressor():
         predictions = defaultdict(list)
         #This functionality should mirror what I do in create_train_and_predict
         #Mean should be replaced with a custom function
-        playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
+        #playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
+        #This will break if columns_to_train is 'all'
+        playerframe = df_fouryearstats.groupby('Player').apply(wm,self.columns_to_train).sort_index()
         players = set(playerframe.index)
 
         #Doing nested for-loop so that I can easily keep predictions together
@@ -260,7 +267,9 @@ class SeasonalRegressor():
         #Here is where I want to apply a custom function, something more heavily weighted towards most recent
         #seasons.  Currently, I just use the built-in groupby-mean.  That doesn't capture trajectories very well.
         #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
-        df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+        #df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+        #Use weighted average trajectory to train
+        df_transformed_train = df_full_train.groupby('Player').apply(wm,self.columns_to_train).sort_index()
 
         #Re-index the predict frame
         df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
