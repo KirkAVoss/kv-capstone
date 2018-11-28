@@ -7,14 +7,8 @@ import matplotlib.pyplot as plt
 import os, sys
 sys.path.insert(0, '/Users/kv/workspace/kv-capstone/NBAwinshare/source')
 
-from helper_functions import weighted_mean_one_col_weight as wm
-#from sklearn.model_selection import train_test_split
-#from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-#from sklearn.linear_model import LogisticRegression
-#from sklearn.metrics import precision_score, recall_score, confusion_matrix
-#import seaborn as sn
-#from scipy import stats
-#import pickle
+#from helper_functions import weighted_mean_one_col_weight as wm
+from helper_functions import weighted_mean_multi_col_weight as wm2
 
 class SeasonalRegressor():
     '''
@@ -22,12 +16,17 @@ class SeasonalRegressor():
     '''
 
 
-    def __init__(self, regressor_type='RF', columns_to_train='all'):
+    def __init__(self, regressor_type='RF', columns_to_train='all', function='default'):
         '''
         Instantiates a model
         Input: regressor_type -- type of regressor used in the prediction algo, defaults to random forest (only option operative)
                 columnes_to_train -- the columns used to train the model
+                function -- the function used to smooth data in the fit and predict methods.  The 'default' option is just the
+                pandas.groupby.mean() function
         '''
+
+        self.meanfunc = function
+
         #these are the years to predict
         self.years_to_predict = [5, 6, 7, 8, 9]
         self.regressor_dict = {}
@@ -119,7 +118,12 @@ class SeasonalRegressor():
         #Mean should be replaced with a custom function
         #playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
         #This will break if columns_to_train is 'all'
-        playerframe = df_fouryearstats.groupby('Player').apply(wm,self.columns_to_train).sort_index()
+        #playerframe = df_fouryearstats.groupby('Player').apply(wm,self.columns_to_train).sort_index()
+        #playerframe = df_fouryearstats.groupby('Player').apply(wm2,self.columns_to_train).sort_index()
+        if self.meanfunc == 'default':
+            playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
+        else:
+            playerframe = df_fouryearstats.groupby('Player').apply(self.meanfunc,self.columns_to_train).sort_index()
         players = set(playerframe.index)
 
         #Doing nested for-loop so that I can easily keep predictions together
@@ -269,7 +273,12 @@ class SeasonalRegressor():
         #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
         #df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
         #Use weighted average trajectory to train
-        df_transformed_train = df_full_train.groupby('Player').apply(wm,self.columns_to_train).sort_index()
+        #df_transformed_train = df_full_train.groupby('Player').apply(wm,self.columns_to_train).sort_index()
+        #df_transformed_train = df_full_train.groupby('Player').apply(wm2,self.columns_to_train).sort_index()
+        if self.meanfunc == 'default':
+            df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+        else:
+            df_transformed_train = df_full_train.groupby('Player').apply(self.meanfunc,self.columns_to_train).sort_index()
 
         #Re-index the predict frame
         df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
@@ -471,7 +480,8 @@ class SeasonalRegressor():
 
     def unpack_prediction_dictionary(self, prediction_dictionary):
         '''
-        Unpacks the prediction dictionary (returned by SeasonalRegressor.predict()) for use with MSE
+        Unpacks the prediction dictionary (returned by SeasonalRegressor.predict())
+        for use with MSE score
         '''
 
         predictions = []
