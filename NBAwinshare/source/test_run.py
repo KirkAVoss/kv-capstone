@@ -1,5 +1,6 @@
 import seasonalregressor
 import data_wrangle
+import clustering
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -36,16 +37,25 @@ with open('../train_test.pkl', 'rb') as f:
 
 fulltrain, fulltest = sr.create_train_test_split(fullstats, trainnames, testnames)
 
-sr = sr.fit(fulltrain)
+#sr = sr.fit(fulltrain)
+#
+# pred_dict = sr.predict(fulltest)
+#
+# predictions = sr.unpack_prediction_dictionary(pred_dict)
+#
+# actuals = data_wrangle.get_actuals_for_years_5_thru_9(fullstats, testnames)
+#
+# score = mean_squared_error(actuals, predictions)
 
-pred_dict = sr.predict(fulltest)
+df, y, _ = sr.create_train_and_predict_X_and_y_of_first_four_seasons(fullstats,5)
 
-predictions = sr.unpack_prediction_dictionary(pred_dict)
+# linktype = 'complete'
+# metric = 'cosine'
+# clustering.make_dendrogram(df.iloc[:,:-2], linktype, metric, color_threshold=None, fontsize=6, savefile='complete_cosine.png')
+# linktype = 'average'
+# metric = 'euclid'
+# clustering.make_dendrogram(df.iloc[:,:-2], linktype, metric, color_threshold=None, fontsize=6, savefile='LBJ_dendro_avg_euc.png')
 
-actuals = data_wrangle.get_actuals_for_years_5_thru_9(fullstats, testnames)
-
-score = mean_squared_error(actuals, predictions)
-
-#From Jupyter notebook is 5.8675836
-#From test_run.py is 5.78168
-print('MSE is ', score)
+closest = clustering.get_x_nearest_players(df, x=5)
+for player, closeguys in closest.items():
+    print("Player: ", player, ":", closeguys)
