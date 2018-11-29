@@ -282,9 +282,8 @@ class SeasonalRegressor():
         plt.plot(predseasons, predictions, '.-')
         if actuals.any():
             plt.plot(actualseasons, actuals, '.-')
-            plt.xticks(actualseasons)
-        else:
-            plt.xticks(predseasons)
+
+        plt.xticks(range(1,10))
 
         plt.legend(['Predictions', 'Actuals'], loc='upper right')
         plt.show()
