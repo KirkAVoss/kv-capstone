@@ -3,6 +3,7 @@ import numpy as np
 from collections import defaultdict
 from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
+import data_wrangle
 
 import os, sys
 sys.path.insert(0, '/Users/kv/workspace/kv-capstone/NBAwinshare/source')
@@ -244,9 +245,19 @@ class SeasonalRegressor():
         return df_only_full_players
 
     #Could probably move this function out of the class, or at least make static
-    def plot_player_arc(self, playername, predictions, predseasons= [5,6,7,8,9], actuals=None, actualseasons=None):
+    def plot_player_arc(self, df_fullstats, playername, prediction_dict):
         '''
         Plots the player arc based on predictions
+        Inputs: df_fullstats - dataframe containing the full stats
+                playername - string - player name for the predictions
+                prediction_dict - dictionary of predicted values (Win Shares), key is playername
+        '''
+        x,y = data_wrangle.get_actuals_for_first_x_years(df_fullstats, playername)
+        self._plot_player_arc_helper(playername,prediction_dict[playername], actuals = y, actualseasons=x)
+
+    def _plot_player_arc_helper(self, playername, predictions, predseasons= [5,6,7,8,9], actuals=None, actualseasons=None):
+        '''
+        Helper Function that plots the player arc based on predictions
         Inputs: playername - string - player name for the predictions
                 predictions - array of predicted values (Win Shares)
                 seasons - the seasons (x-axis)
@@ -258,9 +269,9 @@ class SeasonalRegressor():
 
 
         #plot the predicted seasons
-        plt.plot(predseasons, predictions)
+        plt.plot(predseasons, predictions, '.-')
         if actuals.any():
-            plt.plot(actualseasons, actuals)
+            plt.plot(actualseasons, actuals, '.-')
             plt.xticks(actualseasons)
         else:
             plt.xticks(predseasons)
