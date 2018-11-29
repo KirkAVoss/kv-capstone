@@ -383,11 +383,13 @@ class SeasonalRegressor():
     def create_train_test_split(self, df_fullstats, trainplayers, testplayers):
         '''
         Create a train_test_split for df_fullstats DataFrame
-        trainplayers -- read in from pkl object, list of players for training
-        testplayers -- read in from pkl object, list of players for testing
+        trainplayers - list of train players- read in from pkl object, list of players for training
+        testplayers  - list of test players- read in from pkl object, list of players for testing--
+                        limited to first four seasons to prevent from predicting on future data
         '''
         trainframe = df_fullstats[df_fullstats['Player'].isin(trainplayers)]
-        testframe  = df_fullstats[df_fullstats['Player'].isin(testplayers)]
+        testframe  = df_fullstats[(df_fullstats['Player'].isin(testplayers)) & \
+        (df_fullstats['Seasons_number'] <= 4)]
 
         return trainframe, testframe
 
