@@ -244,6 +244,16 @@ class SeasonalRegressor():
 
         return df_only_full_players
 
+    def get_single_player_first_x_full_years(self, df_fullstats, playername, season=4):
+        '''
+        Returns the first "season"s worth of the player stats, read in via data_wrangle
+        Can be used with the predict method--even if there aren't four full seasons
+        Inputs: df_fullstats -dataframe of the full player stats for many players
+                playername -string- player name to pull
+
+        '''
+        return df_fullstats[(df_fullstats['Player']==playername) & (df_fullstats['Seasons_number'] <= season)]
+
     #Could probably move this function out of the class, or at least make static
     def plot_player_arc(self, df_fullstats, playername, prediction_dict):
         '''
