@@ -213,96 +213,6 @@ class SeasonalRegressor():
         #return the dataframes
         return df_season_4_reduced, to_predict_dataframe
 
-    def create_train_and_predict_X_and_y_for_season_range(self, df_fullstats, \
-    demographic, last_train_season=4, columns_to_train='all', col_to_predict='WS'):
-        '''
-        This function takes the seasonal information from years 1- (all players and all
-        season-4's) and creates an "X" dataframe, and a "y" dataframe for use with training
-        Inputs: df_fullstats -- a dataframe that has all data player data in it .
-                    Should be result of data_wrangle.add_years_in_league
-                    Should NOT have player name as index, it should be in a 'Player'
-
-                demographic -- should be the demographic database read in via data_wrangle
-
-                last_train_season - should be the final year to get the train-set.  Used to set the end-date
-                    for the X frame.  Thus, last_train_season==4 will return the first four seasons (meaned)
-
-                    The predicted season will be the (last_train_season + 1)
-
-                columns_to_train -- a list of columns, from within fullstats to train on.  Defaults to all
-
-                col_to_predict -- The column we are trying to predict from df_fullstats['Season_number']==(last_train_season +  1): 'WS' by default
-
-        Returns X - dataframe reduced to columns_to_train that has corresponding values in Y
-                y - dataframe containing the col_to_predict, where previous year players are in X
-                players - set of player names that have full data for years 1-last_train_season+1
-        '''
-
-        seasons_needed = set(range(1,last_train_season+1))
-        seasons_only_for_train = set(range(1,last_train_season+1))
-        season_to_predict = last_train_season+1
-        seasons_needed.add(season_to_predict)
-
-        count = 0
-        players_with_fulldata = set()
-
-        #for every unique player in fullstats, let's figure out who we have data for in years: 1-last_train_season
-        for player in df_fullstats['Player'].unique():
-            #get the Season_numbers we have per player
-            playerset = set(df_fullstats.loc[df_fullstats['Player']==player, 'Seasons_number'])
-            #if the player has every year, append to the set of full players
-            if seasons_needed.issubset(playerset):
-                #print("Have full-year stats ",player)
-                players_with_fulldata.add(player)
-                count += 1
-        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
-
-
-        #Get the player-rows that we want to train and predict upon.  This step could be combined with the next two below,
-        #but I include for readability
-        df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  (df_fullstats['Seasons_number'] <= last_train_season + 1)]
-
-        #Just want the train set (Seasons 1-last_train_season)
-        df_full_train = df_only_full_players[df_only_full_players['Seasons_number'] <=  last_train_season]
-
-        #Get the to-predict set (the season AFTER the last_train_season)
-        df_full_predict = df_only_full_players[df_only_full_players['Seasons_number'] ==  last_train_season+1]
-
-        #Here is where I want to apply a custom function, something more heavily weighted towards most recent
-        #seasons.  Currently, I just use the built-in groupby-mean.  That doesn't capture trajectories very well.
-        #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
-        #df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
-        #Use weighted average trajectory to train
-        #df_transformed_train = df_full_train.groupby('Player').apply(wm,self.columns_to_train).sort_index()
-        #df_transformed_train = df_full_train.groupby('Player').apply(wm2,self.columns_to_train).sort_index()
-        if self.meanfunc == 'default':
-            df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
-        else:
-            df_transformed_train = df_full_train.groupby('Player').apply(self.meanfunc,self.columns_to_train).sort_index()
-
-        #Re-index the predict frame
-        df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
-
-        #Error checking, make sure indices are good
-        if df_transformed_train.index.equals(df_reindexed_predict.index):
-            print("Indices of train set and to-predict set MATCH")
-        else:
-            print("Indices of train set and to-predict DO NOT match:")
-            print(df_transformed_train.index.difference(df_reindexed_predict.index))
-            return (None, None, None)
-
-        #filter the columns
-        if columns_to_train == "all":
-            print("Using all columns")
-            X = df_transformed_train
-        else:
-            print("Using columns: ",columns_to_train)
-            X = df_transformed_train[columns_to_train]
-
-        #grab the column to predict as y
-        y = df_reindexed_predict.pop(col_to_predict)
-
-        return X, y, players_with_fulldata
 
     def get_players_first_x_full_years(self, df_fullstats, season=4):
         '''
@@ -439,9 +349,12 @@ class SeasonalRegressor():
         df_full_predict = df_only_full_players[df_only_full_players['Seasons_number'] ==  season_to_predict]
 
         #Here is where I want to apply a custom function, something more heavily weighted towards most recent
-        #seasons.  Currently, I just use the built-in groupby-mean.  That doesn't capture trajectories very well.
+        #seasons.  Originally, I just used the built-in groupby-mean.  That doesn't capture trajectories very well.
         #And it certainly screws up if the predict set has something funky in it.  Like Al Horford playing 11 games in year 5
-        df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+        if self.meanfunc == 'default':
+            df_transformed_train = df_full_train.groupby('Player').mean().sort_index()
+        else:
+            df_transformed_train = df_full_train.groupby('Player').apply(self.meanfunc,self.columns_to_train).sort_index()
 
         #Re-index the predict frame
         df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
