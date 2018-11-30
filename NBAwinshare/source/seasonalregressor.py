@@ -382,7 +382,7 @@ class SeasonalRegressor():
         #Error checking, make sure indices are good
         if not df_transformed_train.index.equals(df_reindexed_predict.index):
             #print("Indices of train set and to-predict set MATCH")
-            
+
             print("Indices of train set and to-predict DO NOT match:")
             print(df_transformed_train.index.difference(df_reindexed_predict.index))
             return (None, None, None)
@@ -399,6 +399,47 @@ class SeasonalRegressor():
         y = df_reindexed_predict.pop(col_to_predict)
 
         return X, y, players_with_fulldata
+
+    def create_avg_dataframe_for_first_four_seasons(self, df_fullstats, columns_to_use='all'):
+        '''
+        This function takes the seasonal information from years 1-4 and creates an "X" dataframe.
+        We're not worried about predicting based on this frame, so we need not be concerned with
+        players that are missing seasons
+        Inputs: df_fullstats -- a dataframe that has all data player data in it.
+                    Should be result of data_wrangle.add_years_in_league
+                    Should NOT have player name as index, that info should be in a 'Player' field
+
+                year_to_predict - should be the year to predict a specific stats.  Should be in interval [5,9]
+
+                columns_to_use -- a list of columns, from within fullstats to filter.  Defaults to all.
+
+                col_to_predict -- The column we are trying to predict from df_fullstats['Season_number']==(year_to_predict): 'WS' by default
+
+        Returns X - dataframe reduced to columns_to_train that has corresponding values in Y
+                y - dataframe containing the col_to_predict, where previous year players are in X
+                players - set of player names that have full data for years 1-last_train_season+1
+        '''
+
+        #Grab the First four years
+        df_four_years = df_fullstats[df_fullstats['Seasons_number'] <= 4]
+
+        if self.meanfunc == 'default':
+            df_transformed = df_four_years.groupby('Player').mean().sort_index()
+        else:
+            if columns_to_use == 'all':
+                df_transformed = df_four_years.groupby('Player').apply(self.meanfunc,df_fullstats.columns).sort_index()
+            else:
+                df_transformed = df_four_years.groupby('Player').apply(self.meanfunc,columns_to_use).sort_index()
+
+        #print(df_transformed.head().T)
+
+        #filter the columns
+        if columns_to_use == "all":
+            X = df_transformed
+        else:
+            X = df_transformed[columns_to_use]
+
+        return X
 
     def create_train_test_split(self, df_fullstats, trainplayers, testplayers):
         '''
