@@ -66,7 +66,7 @@ class SeasonalRegressor():
             #This is the old, bad methodology
             #X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
             #col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
-            print("Fitting for year:", year)
+            #print("Fitting for year:", year)
             #Fit the regressor at each year
             self.column_names = list(X.columns)
             self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
@@ -97,7 +97,7 @@ class SeasonalRegressor():
             #Create an X and y for each year.  Note the year-1 used as the argument on last_train_season
             X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
             col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
-            print("Fitting for year:", year)
+            #print("Fitting for year:", year)
             #Fit the regressor at each year
             self.column_names = list(X.columns)
             self.regressor_dict[year] = self.regressor_dict[year].fit(X,y)
@@ -131,7 +131,7 @@ class SeasonalRegressor():
         for year in self.years_to_predict:
             #For each player
             for player in players:
-                print("Predicting year:", year, "for player: ",player)
+                #print("Predicting year:", year, "for player: ",player)
                 #Call the regressor for each year,might need to cast to a float
                 #Super-readable?
                 if self.columns_to_train == "all":
@@ -236,7 +236,7 @@ class SeasonalRegressor():
                 #print("Have full-year stats ",player)
                 players_with_fulldata.add(player)
                 count += 1
-        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
+        #print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
 
         #Get the player-rows that we want to predict.  This step could be combined with the next below,
         #but I include for readability
@@ -355,7 +355,7 @@ class SeasonalRegressor():
                 #print("Have full-year stats ",player)
                 players_with_fulldata.add(player)
                 count += 1
-        print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
+        #print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
 
         #Get the player-rows that we want to train and predict upon.  This step could be combined with the next two below,
         #but I include for readability
@@ -380,19 +380,19 @@ class SeasonalRegressor():
         df_reindexed_predict = df_full_predict.set_index('Player').sort_index()
 
         #Error checking, make sure indices are good
-        if df_transformed_train.index.equals(df_reindexed_predict.index):
-            print("Indices of train set and to-predict set MATCH")
-        else:
+        if not df_transformed_train.index.equals(df_reindexed_predict.index):
+            #print("Indices of train set and to-predict set MATCH")
+            
             print("Indices of train set and to-predict DO NOT match:")
             print(df_transformed_train.index.difference(df_reindexed_predict.index))
             return (None, None, None)
 
         #filter the columns
         if columns_to_train == "all":
-            print("Using all columns")
+            #print("Using all columns")
             X = df_transformed_train
         else:
-            print("Using columns: ",columns_to_train)
+            #print("Using columns: ",columns_to_train)
             X = df_transformed_train[columns_to_train]
 
         #grab the column to predict as y

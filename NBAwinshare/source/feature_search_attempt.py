@@ -6,8 +6,8 @@ import pandas as pd
 import numpy as np
 import seaborn as sb
 from sklearn.metrics import mean_squared_error
-from source.helper_functions import weighted_mean_multi_col_weight as wm2
-from source.helper_functions import weighted_mean_one_col_weight as wm1
+from helper_functions import weighted_mean_multi_col_weight as wm2
+from helper_functions import weighted_mean_one_col_weight as wm1
 import pickle
 
 advanced = data_wrangle.read_all_advanced('../data/advanced')
@@ -59,15 +59,16 @@ for num in num_features:
     for i in range(k):
         cols_to_traink = list(np.random.choice(cols_to_train_from_correlation, size = num, replace=False))
         cols_to_train_list.append(cols_to_traink)
-        for function in functions:
-            for cols_to_train from cols_to_train_list
-                sr = seasonalregressor.SeasonalRegressor(columns_to_train=cols_to_train, function=function)
-                sr = sr.fit(fulltrain)
-                pred_dict = sr.predict(fulltest)
-                predictions = sr.unpack_prediction_dictionary(pred_dict)
-                score = mean_squared_error(actuals, predictions)
-                scores[str(function)+str(cols_to_train)] = score
-                print(str(function)+str(cols_to_train), '|||', score)
+    for function in functions:
+        for cols_to_train in cols_to_train_list:
+            print("Attempting: ",num, function, cols_to_train)
+            sr = seasonalregressor.SeasonalRegressor(columns_to_train=cols_to_train, function=function)
+            sr = sr.fit(fulltrain)
+            pred_dict = sr.predict(fulltest)
+            predictions = sr.unpack_prediction_dictionary(pred_dict)
+            score = mean_squared_error(actuals, predictions)
+            scores[str(function)+str(cols_to_train)] = score
+            print(str(function)+str(cols_to_train), '|||', score)
 
 minscore = min(scores.values())
 for key, score in scores.items():

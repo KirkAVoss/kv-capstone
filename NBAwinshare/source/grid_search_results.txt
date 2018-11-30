@@ -1,0 +1,364 @@
+/anaconda3/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+Attempting:  5 default ['FT', 'OWS', 'G', 'GS', 'MP_pergame']
+default['FT', 'OWS', 'G', 'GS', 'MP_pergame'] ||| 9.453277103225806
+Attempting:  5 default ['BPM', 'PS/G', 'GS', '2P', 'DRB']
+default['BPM', 'PS/G', 'GS', '2P', 'DRB'] ||| 9.261761548387097
+Attempting:  5 default ['WS', 'STL', 'FG', '2P', 'MP_total']
+default['WS', 'STL', 'FG', '2P', 'MP_total'] ||| 9.045848322580646
+Attempting:  5 default ['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM']
+default['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM'] ||| 9.202959993548387
+Attempting:  5 default ['WS', 'OBPM', '2PA', 'DWS', 'TOV']
+default['WS', 'OBPM', '2PA', 'DWS', 'TOV'] ||| 9.30510977419355
+Attempting:  5 default ['G', 'FTA', 'TRB', '2P', 'FT']
+default['G', 'FTA', 'TRB', '2P', 'FT'] ||| 10.318231096774197
+Attempting:  5 default ['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP']
+default['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP'] ||| 10.535210599999997
+Attempting:  5 default ['TOV', 'MP_pergame', 'FT', 'PER', 'FGA']
+default['TOV', 'MP_pergame', 'FT', 'PER', 'FGA'] ||| 8.935600406451615
+Attempting:  5 default ['MP_total', 'VORP', 'GS', 'WS', 'OBPM']
+default['MP_total', 'VORP', 'GS', 'WS', 'OBPM'] ||| 10.145924954838708
+Attempting:  5 default ['PS/G', 'FG', 'TRB', 'PER', 'G']
+default['PS/G', 'FG', 'TRB', 'PER', 'G'] ||| 8.659650741935483
+Attempting:  5 default ['PER', 'STL', 'VORP', 'TOV', 'GS']
+default['PER', 'STL', 'VORP', 'TOV', 'GS'] ||| 8.819753825806455
+Attempting:  5 default ['OBPM', 'FGA', 'DRB', '2P', 'FG']
+default['OBPM', 'FGA', 'DRB', '2P', 'FG'] ||| 9.069403606451614
+Attempting:  5 default ['OBPM', 'PS/G', 'PER', 'FG', 'DWS']
+default['OBPM', 'PS/G', 'PER', 'FG', 'DWS'] ||| 8.15394792903226
+Attempting:  5 default ['2PA', 'FGA', 'PER', 'OBPM', 'TOV']
+default['2PA', 'FGA', 'PER', 'OBPM', 'TOV'] ||| 8.203855348387096
+Attempting:  5 default ['2PA', 'GS', 'DRB', 'FGA', 'OWS']
+default['2PA', 'GS', 'DRB', 'FGA', 'OWS'] ||| 9.455942406451612
+Attempting:  5 default ['TOV', 'FG', 'DWS', 'STL', '2PA']
+default['TOV', 'FG', 'DWS', 'STL', '2PA'] ||| 9.73844966451613
+Attempting:  5 default ['DRB', 'OWS', 'STL', 'TOV', 'GS']
+default['DRB', 'OWS', 'STL', 'TOV', 'GS'] ||| 9.677491664516129
+Attempting:  5 default ['TRB', 'OWS', 'GS', 'DRB', 'STL']
+default['TRB', 'OWS', 'GS', 'DRB', 'STL'] ||| 8.805057122580644
+Attempting:  5 default ['BPM', 'TOV', '2P', 'WS', 'OBPM']
+default['BPM', 'TOV', '2P', 'WS', 'OBPM'] ||| 8.88376075483871
+Attempting:  5 default ['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG']
+default['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG'] ||| 8.98974990967742
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'OWS', 'G', 'GS', 'MP_pergame']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'OWS', 'G', 'GS', 'MP_pergame'] ||| 9.52875269032258
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['BPM', 'PS/G', 'GS', '2P', 'DRB']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['BPM', 'PS/G', 'GS', '2P', 'DRB'] ||| 8.888893625806451
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['WS', 'STL', 'FG', '2P', 'MP_total']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['WS', 'STL', 'FG', '2P', 'MP_total'] ||| 8.391684632258064
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM'] ||| 9.018666664516129
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['WS', 'OBPM', '2PA', 'DWS', 'TOV']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['WS', 'OBPM', '2PA', 'DWS', 'TOV'] ||| 8.045275929032261
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['G', 'FTA', 'TRB', '2P', 'FT']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['G', 'FTA', 'TRB', '2P', 'FT'] ||| 10.675221077419355
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP'] ||| 9.208484212903226
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TOV', 'MP_pergame', 'FT', 'PER', 'FGA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TOV', 'MP_pergame', 'FT', 'PER', 'FGA'] ||| 9.955215232258066
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_total', 'VORP', 'GS', 'WS', 'OBPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_total', 'VORP', 'GS', 'WS', 'OBPM'] ||| 9.177684141935485
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['PS/G', 'FG', 'TRB', 'PER', 'G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['PS/G', 'FG', 'TRB', 'PER', 'G'] ||| 9.244678251612905
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['PER', 'STL', 'VORP', 'TOV', 'GS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['PER', 'STL', 'VORP', 'TOV', 'GS'] ||| 9.374609322580644
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['OBPM', 'FGA', 'DRB', '2P', 'FG']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['OBPM', 'FGA', 'DRB', '2P', 'FG'] ||| 7.805424670967741
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['OBPM', 'PS/G', 'PER', 'FG', 'DWS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['OBPM', 'PS/G', 'PER', 'FG', 'DWS'] ||| 9.569721587096776
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['2PA', 'FGA', 'PER', 'OBPM', 'TOV']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['2PA', 'FGA', 'PER', 'OBPM', 'TOV'] ||| 8.407939322580647
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['2PA', 'GS', 'DRB', 'FGA', 'OWS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['2PA', 'GS', 'DRB', 'FGA', 'OWS'] ||| 8.944476793548388
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TOV', 'FG', 'DWS', 'STL', '2PA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TOV', 'FG', 'DWS', 'STL', '2PA'] ||| 9.39306656129032
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['DRB', 'OWS', 'STL', 'TOV', 'GS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['DRB', 'OWS', 'STL', 'TOV', 'GS'] ||| 9.348136212903224
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TRB', 'OWS', 'GS', 'DRB', 'STL']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TRB', 'OWS', 'GS', 'DRB', 'STL'] ||| 8.904141303225806
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['BPM', 'TOV', '2P', 'WS', 'OBPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['BPM', 'TOV', '2P', 'WS', 'OBPM'] ||| 7.7849984193548405
+Attempting:  5 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG'] ||| 10.005792367741936
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'OWS', 'G', 'GS', 'MP_pergame']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'OWS', 'G', 'GS', 'MP_pergame'] ||| 8.395209929032259
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['BPM', 'PS/G', 'GS', '2P', 'DRB']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['BPM', 'PS/G', 'GS', '2P', 'DRB'] ||| 8.362179909677419
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['WS', 'STL', 'FG', '2P', 'MP_total']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['WS', 'STL', 'FG', '2P', 'MP_total'] ||| 9.540420554838711
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FGA', 'DWS', 'MP_pergame', 'MP_total', 'OBPM'] ||| 8.335948806451613
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['WS', 'OBPM', '2PA', 'DWS', 'TOV']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['WS', 'OBPM', '2PA', 'DWS', 'TOV'] ||| 7.907349458064516
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['G', 'FTA', 'TRB', '2P', 'FT']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['G', 'FTA', 'TRB', '2P', 'FT'] ||| 10.449345477419358
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['BPM', 'MP_pergame', 'DWS', 'GS', 'VORP'] ||| 9.368235606451611
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TOV', 'MP_pergame', 'FT', 'PER', 'FGA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TOV', 'MP_pergame', 'FT', 'PER', 'FGA'] ||| 9.479997406451615
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_total', 'VORP', 'GS', 'WS', 'OBPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_total', 'VORP', 'GS', 'WS', 'OBPM'] ||| 9.007169232258065
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['PS/G', 'FG', 'TRB', 'PER', 'G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['PS/G', 'FG', 'TRB', 'PER', 'G'] ||| 8.457577961290323
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['PER', 'STL', 'VORP', 'TOV', 'GS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['PER', 'STL', 'VORP', 'TOV', 'GS'] ||| 9.025631812903224
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['OBPM', 'FGA', 'DRB', '2P', 'FG']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['OBPM', 'FGA', 'DRB', '2P', 'FG'] ||| 7.0122779806451625
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['OBPM', 'PS/G', 'PER', 'FG', 'DWS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['OBPM', 'PS/G', 'PER', 'FG', 'DWS'] ||| 7.97525693548387
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['2PA', 'FGA', 'PER', 'OBPM', 'TOV']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['2PA', 'FGA', 'PER', 'OBPM', 'TOV'] ||| 8.247150483870968
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['2PA', 'GS', 'DRB', 'FGA', 'OWS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['2PA', 'GS', 'DRB', 'FGA', 'OWS'] ||| 8.805429529032258
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TOV', 'FG', 'DWS', 'STL', '2PA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TOV', 'FG', 'DWS', 'STL', '2PA'] ||| 9.050203761290323
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['DRB', 'OWS', 'STL', 'TOV', 'GS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['DRB', 'OWS', 'STL', 'TOV', 'GS'] ||| 9.03311159354839
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TRB', 'OWS', 'GS', 'DRB', 'STL']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TRB', 'OWS', 'GS', 'DRB', 'STL'] ||| 8.465059232258064
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['BPM', 'TOV', '2P', 'WS', 'OBPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['BPM', 'TOV', '2P', 'WS', 'OBPM'] ||| 7.451848038709678
+Attempting:  5 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['STL', 'PS/G', 'MP_pergame', 'FTA', 'FG'] ||| 9.47128235483871
+Attempting:  10 default ['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA']
+default['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA'] ||| 8.467736322580647
+Attempting:  10 default ['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS']
+default['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS'] ||| 9.023890896774194
+Attempting:  10 default ['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS']
+default['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS'] ||| 9.391708103225808
+Attempting:  10 default ['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA']
+default['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA'] ||| 8.777012967741936
+Attempting:  10 default ['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT']
+default['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT'] ||| 8.922793116129032
+Attempting:  10 default ['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP']
+default['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP'] ||| 8.695936529032258
+Attempting:  10 default ['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP']
+default['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP'] ||| 9.327974832258064
+Attempting:  10 default ['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA']
+default['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA'] ||| 9.241950032258067
+Attempting:  10 default ['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P']
+default['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P'] ||| 8.262099935483873
+Attempting:  10 default ['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total']
+default['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total'] ||| 8.66510155483871
+Attempting:  10 default ['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG']
+default['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG'] ||| 8.90636190967742
+Attempting:  10 default ['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G']
+default['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G'] ||| 8.625397316129032
+Attempting:  10 default ['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G']
+default['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G'] ||| 9.496525032258065
+Attempting:  10 default ['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV']
+default['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV'] ||| 9.392413212903225
+Attempting:  10 default ['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G']
+default['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G'] ||| 9.107920290322584
+Attempting:  10 default ['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS']
+default['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS'] ||| 9.763950870967744
+Attempting:  10 default ['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame']
+default['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame'] ||| 9.414738916129034
+Attempting:  10 default ['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG']
+default['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG'] ||| 8.761728832258065
+Attempting:  10 default ['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS']
+default['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS'] ||| 9.094904606451612
+Attempting:  10 default ['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS']
+default['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS'] ||| 8.64003361935484
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA'] ||| 8.847536380645161
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS'] ||| 9.340388980645164
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS'] ||| 8.707072883870968
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA'] ||| 8.653668541935485
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT'] ||| 8.49073252903226
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP'] ||| 8.659143941935483
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP'] ||| 8.361948832258063
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA'] ||| 8.096084967741936
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P'] ||| 7.200128987096775
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total'] ||| 7.727852619354839
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG'] ||| 8.509409464516128
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G'] ||| 7.889516935483871
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G'] ||| 9.108795180645162
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV'] ||| 8.795242387096774
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G'] ||| 8.25040897419355
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS'] ||| 9.157569729032259
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame'] ||| 8.413174025806452
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG'] ||| 8.515991329032259
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS'] ||| 9.141548516129031
+Attempting:  10 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS'] ||| 7.904499548387095
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'PS/G', 'WS', 'OWS', 'PER', '2P', 'MP_total', 'FGA', 'GS', '2PA'] ||| 8.704790109677422
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'FGA', '2P', 'PER', '2PA', 'DWS', 'MP_total', 'G', 'TOV', 'GS'] ||| 8.49991195483871
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'OWS', 'DRB', 'OBPM', 'FTA', 'TOV', 'MP_total', 'G', '2P', 'DWS'] ||| 7.907431858064517
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['DWS', 'VORP', 'PER', 'OBPM', 'BPM', 'OWS', 'DRB', 'G', 'FT', 'FTA'] ||| 8.328246141935486
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_pergame', 'VORP', '2PA', 'DWS', 'TRB', 'OWS', 'PS/G', 'G', 'OBPM', 'FT'] ||| 7.96379891612903
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['BPM', 'FGA', 'FG', 'STL', 'FTA', 'WS', '2P', 'DRB', 'PER', 'VORP'] ||| 8.632774116129031
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['GS', 'MP_pergame', 'TOV', '2PA', 'DWS', 'STL', 'MP_total', 'BPM', 'OBPM', 'VORP'] ||| 8.357425561290324
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['VORP', 'TRB', '2P', 'TOV', 'FG', 'MP_total', 'BPM', 'OBPM', 'G', 'FGA'] ||| 7.55215526451613
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['WS', 'TRB', 'STL', 'OBPM', 'TOV', 'DRB', 'PER', 'FG', 'MP_pergame', '2P'] ||| 7.518846232258065
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TRB', 'STL', 'DRB', 'PS/G', 'BPM', 'WS', '2P', 'OBPM', '2PA', 'MP_total'] ||| 7.700890387096775
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['WS', 'MP_pergame', 'TOV', 'FGA', 'VORP', '2P', 'DWS', 'PS/G', 'OWS', 'FG'] ||| 8.18453823870968
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['VORP', '2P', 'DRB', 'TOV', 'PS/G', 'OWS', 'FTA', 'FGA', 'OBPM', 'G'] ||| 7.61579362580645
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['STL', 'DRB', 'TRB', 'PS/G', 'FTA', 'OWS', 'MP_total', 'DWS', 'GS', 'G'] ||| 8.578294883870967
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_total', 'GS', 'FGA', 'STL', 'FT', 'DWS', 'VORP', 'FTA', '2P', 'TOV'] ||| 9.051170767741937
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TOV', 'FTA', 'STL', 'DRB', '2P', 'GS', 'TRB', 'DWS', 'WS', 'PS/G'] ||| 8.927735316129034
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'MP_total', 'GS', '2P', 'DWS', 'FGA', 'FTA', '2PA', 'MP_pergame', 'WS'] ||| 9.430734580645165
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['DWS', '2P', 'BPM', 'FG', 'DRB', 'GS', 'TRB', 'MP_total', 'PS/G', 'MP_pergame'] ||| 8.146851948387098
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['BPM', 'WS', 'GS', 'FGA', 'DWS', 'DRB', 'PER', 'TOV', 'OWS', 'FG'] ||| 8.407480058064518
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TOV', 'MP_total', 'DRB', 'PS/G', 'FT', 'STL', 'BPM', 'MP_pergame', 'FG', 'DWS'] ||| 7.975439425806452
+Attempting:  10 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TRB', '2PA', '2P', 'OBPM', 'BPM', 'DRB', 'FG', 'GS', 'OWS', 'WS'] ||| 7.769868890322581
+Attempting:  15 default ['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS']
+default['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS'] ||| 8.81994069032258
+Attempting:  15 default ['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG']
+default['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG'] ||| 8.436346270967743
+Attempting:  15 default ['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS']
+default['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS'] ||| 8.660425716129032
+Attempting:  15 default ['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS']
+default['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS'] ||| 8.667817148387096
+Attempting:  15 default ['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G']
+default['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G'] ||| 8.617910703225807
+Attempting:  15 default ['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM']
+default['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM'] ||| 8.871136890322582
+Attempting:  15 default ['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G']
+default['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G'] ||| 9.022433051612904
+Attempting:  15 default ['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER']
+default['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER'] ||| 8.473138993548389
+Attempting:  15 default ['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total']
+default['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total'] ||| 8.770750787096773
+Attempting:  15 default ['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P']
+default['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P'] ||| 8.158320593548389
+Attempting:  15 default ['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS']
+default['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS'] ||| 8.941216232258064
+Attempting:  15 default ['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA']
+default['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA'] ||| 9.039492890322583
+Attempting:  15 default ['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM']
+default['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM'] ||| 8.7209406
+Attempting:  15 default ['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS']
+default['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS'] ||| 8.781308070967741
+Attempting:  15 default ['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA']
+default['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA'] ||| 8.476312612903225
+Attempting:  15 default ['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA']
+default['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA'] ||| 8.552546987096775
+Attempting:  15 default ['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER']
+default['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER'] ||| 8.420193870967744
+Attempting:  15 default ['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT']
+default['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT'] ||| 8.181615561290322
+Attempting:  15 default ['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM']
+default['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM'] ||| 9.178439780645162
+Attempting:  15 default ['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P']
+default['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P'] ||| 8.484679129032257
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS'] ||| 8.682441864516129
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG'] ||| 8.172301122580645
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS'] ||| 8.304359974193549
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS'] ||| 8.526484419354839
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G'] ||| 8.987529341935481
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM'] ||| 8.329016703225808
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G'] ||| 8.442202270967742
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER'] ||| 8.675996438709678
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total'] ||| 8.684331070967742
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P'] ||| 8.515512419354842
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS'] ||| 8.906978193548388
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA'] ||| 8.774112090322582
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM'] ||| 8.313627122580645
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS'] ||| 8.264995535483873
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA'] ||| 8.542049509677419
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA'] ||| 8.357597225806453
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER'] ||| 8.573310780645164
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT'] ||| 8.822339335483873
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM'] ||| 8.647040735483872
+Attempting:  15 <function weighted_mean_one_col_weight at 0x1a23cbf6a8> ['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P']
+<function weighted_mean_one_col_weight at 0x1a23cbf6a8>['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P'] ||| 8.085650051612904
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_pergame', 'BPM', 'PER', 'FTA', 'OBPM', 'FT', 'VORP', 'G', 'DRB', 'GS', '2PA', 'PS/G', 'FGA', 'FG', 'WS'] ||| 7.912919632258065
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['PS/G', 'DRB', 'G', 'TOV', 'PER', 'DWS', '2PA', 'MP_pergame', 'GS', 'OWS', 'OBPM', '2P', 'VORP', 'BPM', 'FG'] ||| 7.708540645161291
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['OWS', 'FTA', 'PER', 'BPM', 'TRB', 'DWS', '2PA', 'FG', 'OBPM', 'MP_total', 'PS/G', 'STL', 'FGA', 'GS', 'WS'] ||| 8.071925458064518
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['PS/G', '2PA', 'GS', 'BPM', 'OBPM', 'FTA', 'PER', 'MP_total', 'FT', 'TRB', 'DRB', 'TOV', 'FGA', 'MP_pergame', 'WS'] ||| 8.064323909677421
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['TOV', 'FT', 'FG', 'TRB', 'VORP', '2P', 'STL', 'MP_pergame', '2PA', 'GS', 'PER', 'BPM', 'FGA', 'FTA', 'PS/G'] ||| 8.413906148387097
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FTA', 'FT', 'OWS', 'DWS', '2P', 'WS', 'MP_total', 'G', 'PER', 'GS', 'VORP', 'MP_pergame', 'FGA', 'STL', 'OBPM'] ||| 8.442575825806452
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['G', 'FG', 'FTA', 'MP_total', 'WS', '2PA', 'STL', 'DWS', 'OBPM', '2P', 'TOV', 'DRB', 'VORP', 'FT', 'PS/G'] ||| 8.0981286
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_total', 'GS', 'G', 'FG', '2PA', 'FTA', 'FT', 'OWS', 'DRB', 'TRB', 'MP_pergame', 'STL', 'DWS', '2P', 'PER'] ||| 8.330805954838711
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_pergame', 'DWS', 'FG', 'OBPM', 'FGA', 'BPM', 'TOV', 'FTA', 'PER', 'WS', 'DRB', 'TRB', 'FT', 'GS', 'MP_total'] ||| 8.036322348387099
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_pergame', 'FG', 'MP_total', 'FTA', 'STL', 'FGA', 'WS', 'DRB', 'TOV', 'DWS', 'PS/G', 'OWS', 'PER', 'FT', '2P'] ||| 8.205980438709677
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['G', 'PS/G', 'FGA', 'STL', 'WS', 'DWS', 'BPM', 'OBPM', 'PER', 'FG', 'DRB', 'TOV', 'FTA', 'FT', 'GS'] ||| 8.312801141935482
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'DRB', 'PS/G', 'GS', 'DWS', 'FG', 'BPM', 'TRB', 'FTA', 'MP_total', 'WS', 'OWS', 'PER', '2P', 'FGA'] ||| 8.447318864516129
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['MP_total', 'TOV', 'MP_pergame', 'PS/G', 'FTA', 'OBPM', 'DRB', 'STL', 'FG', '2P', 'FGA', 'FT', 'DWS', 'TRB', 'BPM'] ||| 7.869125832258063
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FT', 'FGA', 'PS/G', 'FG', 'MP_total', 'STL', 'VORP', 'TOV', 'GS', 'OBPM', '2PA', 'G', 'BPM', 'OWS', 'WS'] ||| 8.09177469032258
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FGA', 'FG', 'MP_total', 'PS/G', 'DRB', 'TRB', 'MP_pergame', 'BPM', 'FT', 'STL', 'FTA', 'GS', 'OWS', 'TOV', '2PA'] ||| 8.576008554838712
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['G', '2P', 'DWS', 'FT', 'BPM', 'MP_pergame', 'PER', 'OBPM', 'OWS', 'VORP', 'WS', 'FG', '2PA', 'PS/G', 'FTA'] ||| 8.136485670967742
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['OWS', 'FG', '2PA', 'FT', 'G', 'DWS', '2P', 'OBPM', 'MP_total', 'GS', 'VORP', 'TRB', 'BPM', 'MP_pergame', 'PER'] ||| 8.02166649032258
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['2PA', 'OBPM', 'FGA', '2P', 'PS/G', 'STL', 'TOV', 'MP_total', 'PER', 'FG', 'MP_pergame', 'DRB', 'DWS', 'BPM', 'FT'] ||| 7.829344432258063
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['FTA', 'FT', 'MP_total', 'DRB', 'FGA', 'OWS', 'PER', 'MP_pergame', 'GS', 'DWS', 'PS/G', 'G', '2PA', 'WS', 'OBPM'] ||| 8.04915377419355
+Attempting:  15 <function weighted_mean_multi_col_weight at 0x1a23cbf730> ['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P']
+<function weighted_mean_multi_col_weight at 0x1a23cbf730>['OWS', 'BPM', 'TRB', 'GS', 'MP_total', 'PS/G', 'DWS', 'TOV', 'FGA', 'STL', 'VORP', 'OBPM', 'PER', '2PA', '2P'] ||| 8.13080310967742
+Min score is : 7.0122779806451625
+Min key is  <function weighted_mean_multi_col_weight at 0x1a23cbf730>['OBPM', 'FGA', 'DRB', '2P', 'FG']
