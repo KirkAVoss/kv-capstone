@@ -56,6 +56,15 @@ df, y, _ = sr.create_train_and_predict_X_and_y_of_first_four_seasons(fullstats,5
 # metric = 'euclid'
 # clustering.make_dendrogram(df.iloc[:,:-2], linktype, metric, color_threshold=None, fontsize=6, savefile='LBJ_dendro_avg_euc.png')
 
+#linktype = 'single'
+#metric = 'euclid'
+#clustering.make_dendrogram(df.iloc[:,:-2], linktype, metric, color_threshold=None, fontsize=6, savefile='dendro_single_euc.png')
+
+linktype = 'complete'
+metric = 'euclid'
+clustering.make_dendrogram(df.iloc[:,:-2], linktype, metric, color_threshold=None, fontsize=6, savefile='dendro_complete_euc.png')
+
+
 closest = clustering.get_x_nearest_players(df, x=5)
 for player, closeguys in closest.items():
     print("Player: ", player, ":", closeguys)
