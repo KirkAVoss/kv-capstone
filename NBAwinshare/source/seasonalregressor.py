@@ -273,10 +273,10 @@ class SeasonalRegressor():
                 seasons - the seasons (x-axis)
                 actuals - array of actual values to plot against the predicted values
         '''
-        plt.title('WinShare Predictions for ' + playername + '')
+        plt.style.use('fivethirtyeight')
+        plt.title('Win-Share Predictions for ' + playername + '')
         plt.ylabel('Win Shares')
         plt.xlabel('Seasons')
-
 
         #plot the predicted seasons
         plt.plot(predseasons, predictions, '.-')
@@ -285,7 +285,7 @@ class SeasonalRegressor():
 
         plt.xticks(range(1,10))
 
-        plt.legend(['Predictions', 'Actuals'], loc='upper right')
+        plt.legend(['Predictions', 'Actuals'], loc='best')
         plt.show()
         pass
 
