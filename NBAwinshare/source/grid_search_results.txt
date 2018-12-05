@@ -1,5 +1,10 @@
-/anaconda3/lib/python3.6/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
-  import imp
+This file contains the results of my "Grid Search," which was really just a subset of:
+*Sets of 5, 10, and 15 features that were highly correlated with Win-shares
+*Different averaging functions for years 1-4
+  -default is just np.mean()
+  -weighted average based on Season_number (mean_one_col_weight)
+  -weighted average based on Season_number * Games Played in that Season (mean_multi_col_weight)
+
 Attempting:  5 default ['FT', 'OWS', 'G', 'GS', 'MP_pergame']
 default['FT', 'OWS', 'G', 'GS', 'MP_pergame'] ||| 9.453277103225806
 Attempting:  5 default ['BPM', 'PS/G', 'GS', '2P', 'DRB']

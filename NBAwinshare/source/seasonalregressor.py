@@ -34,6 +34,7 @@ class SeasonalRegressor():
         self.columns_to_train = columns_to_train
         self.column_names = None
         self.players_with_fulldata = {}
+        #For every year we want to predict, create a regressor for that year, and store it in the dictionary.
         for year in self.years_to_predict:
             if regressor_type == 'RF':
                 #Need to figure out how to pass arguments to this thing for grid search purposes
@@ -63,9 +64,6 @@ class SeasonalRegressor():
             year, col_to_predict = col_to_predict, columns_to_train = self.columns_to_train)
             self.players_with_fulldata[year] = fullplayers
 
-            #This is the old, bad methodology
-            #X, y, _ = self.create_train_and_predict_X_and_y_for_season_range(df_fullstats, df_demographic, \
-            #col_to_predict = col_to_predict, columns_to_train = self.columns_to_train, last_train_season= year-1)
             #print("Fitting for year:", year)
             #Fit the regressor at each year
             self.column_names = list(X.columns)
@@ -74,7 +72,8 @@ class SeasonalRegressor():
         return self
 
 
-
+    #This was a method when I was contemplating extrapolating out actual data from year 1-4 to use for 5-9
+    #I'm leaving it in case I want to come back to it later.
     def fit_bad(self, df_fullstats, df_demographic, col_to_predict='WS'):
         '''
         Fits the df_fullstats data to the regressor dictionary.  Shouldn't use this method, it isn't based on just years 1-4
@@ -116,11 +115,7 @@ class SeasonalRegressor():
         '''
         predictions = defaultdict(list)
         #This functionality should mirror what I do in create_train_and_predict
-        #Mean should be replaced with a custom function
-        #playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
         #This will break if columns_to_train is 'all'
-        #playerframe = df_fouryearstats.groupby('Player').apply(wm,self.columns_to_train).sort_index()
-        #playerframe = df_fouryearstats.groupby('Player').apply(wm2,self.columns_to_train).sort_index()
         if self.meanfunc == 'default':
             playerframe = df_fouryearstats.groupby('Player').mean().sort_index()
         else:
@@ -219,7 +214,10 @@ class SeasonalRegressor():
         '''
         Returns the first x years foreach player, if there is full data for that player
 
-        Inputs -- seasons that you need the full data
+        Inputs --   df_fullstats - a dataframe that has all data player data in it .
+                    Should be result of data_wrangle.add_years_in_league
+                    Should NOT have player name as index, it should be in a 'Player'
+                    seasons that you need the full data
         '''
 
         seasons_needed = set(range(1,season+1))
@@ -238,8 +236,7 @@ class SeasonalRegressor():
                 count += 1
         #print("Number of players: ", count, " with full season data for seasons:", seasons_needed)
 
-        #Get the player-rows that we want to predict.  This step could be combined with the next below,
-        #but I include for readability
+        #Get the player-rows that we want to predict.
         df_only_full_players = df_fullstats[(df_fullstats['Player'].isin(players_with_fulldata)) &  (df_fullstats['Seasons_number'] <= season)]
 
         return df_only_full_players
@@ -291,7 +288,7 @@ class SeasonalRegressor():
 
     def plot_feature_importances(self, year_to_plot):
         '''
-        Plots the feature importances
+        Plots the feature importances for a specific regressor
 
         Input -- year_to_plot - integer - the regressor predictor year to use
         '''
