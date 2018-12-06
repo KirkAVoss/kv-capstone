@@ -83,7 +83,7 @@ My test set included a wide range of players, from (future) Hall-of-Famers (Kobe
 
 Generally, for the best players, the model tends to under-predict the player's performance.
 
-<img src="NBAwinshare/images/Kobe_Bryant.png" width="200" height="100" />
+<img src="NBAwinshare/images/Kobe_Bryant.png" width="500" height="400" />
 
 [Steve]
 
