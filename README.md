@@ -1,4 +1,4 @@
-# NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination:
+# NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination
 
 My goal is to predict NBA player performance during years 5-9 of his career, based on the player's statistics from years 1-4.  Currently, I use "Win Shares" as the measure of performance.
 
@@ -83,7 +83,7 @@ My test set included a wide range of players, from (future) Hall-of-Famers (Kobe
 
 Generally, for the best players, the model tends to under-predict the player's performance.
 
-<img src=“images/Kobe_Bryant.png” width=“200" height=“100” />]
+<img src="images/Kobe_Bryant.png" width="200" height="100" />
 
 [Steve]
 
