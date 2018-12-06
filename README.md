@@ -2,7 +2,7 @@
 
 My goal is to predict NBA player performance during years 5-9 of his career, based on the player's statistics from years 1-4.  Currently, I use "Win Shares" as the measure of performance.
 
-I use a collection of regressors--each regressor predicts a single year.
+I use a collection of regressors to predict performance--each regressor predicts a single year.
 
 ## Background and Motivation
 
