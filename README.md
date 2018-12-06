@@ -116,7 +116,7 @@ And let's see what Cuttino Mobley's predictions look like.
 
 ### Replacement-Level Players
 
-For the players closer to the league minimum level, the model tended to over-predict the player's performance.
+For the players closer to the league-minimum level, the model tended to over-predict the player's performance.
 
 <img src="NBAwinshare/images/Shannon_Brown.png" width="550" height="400" />
 
@@ -144,9 +144,9 @@ The five most similar players to Andrew Wiggins happen to be pretty good players
 
 <img src="NBAwinshare/images/Wiggins_Similar.png" width="550" height="400" />
 
-Finley, Hamilton, Ellis all ended up being very good players.  Devin Booker may end up being great (if he isn't already).  Booker also "signed a max money deal this offseason."(https://www.usatoday.com/story/sports/nba/suns/2018/07/07/devin-booker-contract-extension-five-years-158-million-suns/766077002/)  Mercer had a good NBA career.  
+Finley, Hamilton, Ellis all ended up being very good players.  Devin Booker may end up being great (if he isn't already).  Booker also ["signed a max money deal this offseason."](https://www.usatoday.com/story/sports/nba/suns/2018/07/07/devin-booker-contract-extension-five-years-158-million-suns/766077002/)  Mercer had a good NBA career.  
 
-So maybe Wiggins won't be a bust--but I wouldn't consider Finley, Hamilton, or Ellis max players.
+So maybe Wiggins won't be a bust--but I wouldn't consider Mercer, Finley, Hamilton, or Ellis max players.
 
 ## Next Steps
 
