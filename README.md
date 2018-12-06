@@ -1,6 +1,6 @@
 # NBA Win-Share Estimator with Emphasis on Predicting Career Shape Following Rookie Deal Termination:
 
-My goal is to predict NBA player performance during years 5-9 of his career, based on the player's statistics from years 1-4.
+My goal is to predict NBA player performance during years 5-9 of his career, based on the player's statistics from years 1-4.  Currently, I use "Win Shares" as the measure of performance.
 
 I use a collection of regressors--each regressor predicts a single year.
 
@@ -95,6 +95,8 @@ For the worst players, the model tended to over-predict the player's performance
 
 ## Next Steps
 
-My low-hanging-fruit next steps are to pull salary information (for the ultimate business decision) and determine if I can pull historical advanced stats (although I doubt I can effectively use them).
+* Explore using different regressors--especially Gradient Boosted Trees.
 
-The real next step is to do some EDA--create some plots by year, position, body-size to get an expected trend.  Then I'll make my first attempt at an MVP.
+* Incorporate shot selection data (distance of each shot, pulled from play-by-play data).
+
+* Provide an actual salary recommendation.
