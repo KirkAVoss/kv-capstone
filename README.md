@@ -27,7 +27,7 @@ The most notable work related to predicting player performance has been FiveThir
 CARMELO's backbone ["is an algorithm that compares current players to past ones who had statistically similar profile through the same age."](https://fivethirtyeight.com/features/our-nba-player-projections-are-ready-for-2018-19/)  CARMELO mostly relies on a blend of RPM (real-plus-minus) and BPM (box-plus-minus). *Id*.  The CARMELO system also uses in-season ELO ratings (hence the "ELO" in CARMELO) to update the ranking.  FiveThirtyEight is currently mulling over overhauling their in-season update mechanic. *Id*.
 
 
-## Methodology and Technology Stack (Data Sources and Format)
+## Methodology and Technology Stack
 
 I utilized the standard data science technology stack, as seen below:
 [!!!IMAGE!!!!]
@@ -40,13 +40,21 @@ In my SeasonalRegressor class, I utilized a collection of random forest regresso
 
 ## EDA
 
-Some text and figures here.
+The data were generally well formatted.  Very few NANs had to be filled--and most were related to players with very low minutes and who played few seasons.  So, those players were generally irrelevant to the year 5-9 predictions.  For example, some player data contained NANs for 3-point percentage (because they were bigs who never took a 3) or free-throw percentage (because they never took a free throw).  I filled those values with zero.
+
+In the below, we can see that many players only play one or two seasons.  There's a steep drop off to year 2, and a slightly less steep drop to season 3.  
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "All Player Seasons")
+
+Note that this plot includes players multiple times--Dirk Nowitzki appears 20 times--once per each season he played.
+
+So the size for train and test sets was significantly less than the full number of players.  In fact, since 1997, there were only 306 players that played at least on game in seasons 1-9.  A total of 2022 unique players have been in the league in that period--that's only 15%.
 
 ## Challenges
 
 ### Adding "Years in the League"
 
-My initial data that I pulled from Basketball-reference.com, while generally complete, did not include the year the player entered the NBA.  To filter data based on years 1-9 of a player's career, I needed to get the player's initial season. I found some data that include the player's rookie year and used it to create the *Seasons_number* field in my data (i.e. the number of seasons the player has been in the NBA).
+My initial data that I pulled from Basketball-reference.com, while generally complete, did not include the year the player entered the NBA.  To filter data based on years 1-9 of a player's career, I needed the player's initial season. I found some data that include the player's rookie year and used it to create the *Seasons_number* field in my data (i.e. the number of seasons the player has been in the NBA).
 
 ### Database Collisions
 
@@ -73,25 +81,39 @@ My best results XXXX.
 
 My test set included a wide range of players, from (future) Hall-of-Famers (Kobe Bryant, Dwyane Wade, Steve Nash) to excellent/very good players (Shawn Marion, Antwan Jamison, Stephon Marbury, and Cuttino Mobley) to guys at the league minimum-level (Shannon Brown).
 
-Generally, for the best players, the model tended to under-predict the player's performance.
+Generally, for the best players, the model tends to under-predict the player's performance.
 
-[Kobe]
+<img src=“images/Kobe_Bryant.png” width=“200" height=“100” />]
 
 [Steve]
 
 [Dwyane Wade]
 
-For good players, the model seemed to bounce around.
+You can also see the dip at year 5 of Wade's actual win shares.  This result is a function of a couple things.  First, Dwyane Wade missed about a third of the season--so it's hard to accumulate win shares when you aren't on the floor.  Second, the Heat weren't very good.  They won a measly 15 games.  So while Wade did not play very much, he still accounted for about 30% of the Heat's wins.  Not half bad.
+
+But this also highlights using a non-rate-based stat like win shares as a the measure of performance.  Good players on bad teams are
+
+For good--but not great--players, the model seemed to bounce around between over- and under-predicting.
 
 [Antawn Jamison]
 
 [Cuttino Mobley]
 
-For the worst players, the model tended to over-predict the player's performance.
+For the players closer to the league minimum level, the model tended to over-predict the player's performance.
 
 [Shannon Brown]
 
 [Jakob]
+
+## LeBron is Good, Machine Learning Told me So.
+
+LeBron is an outlier.
+
+I performed a hierarchical clustering analysis with player data from years one through four. Hierarchical clustering iteratively groups observations (here, players) together based on their similarities. These similiarities are displayed on a dendrogram. The height of connections between players indicates their similarity--the lower the height of the connection, the more similar the players are.
+
+This dendrogram shows the linkage between players using "average" linkage--which means that the distance between two clusters is the average distance between each point in one cluster to another. For a distance metric, I used Eucilidean distance (the straight-line distance between two points).
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "All Player Seasons")
 
 ## Next Steps
 
